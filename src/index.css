@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-active{
+ @apply bg-clr-bg;
+ @apply border-2;
+ @apply border-black;
+ @apply text-black;
+ @apply py-[0.7rem];
+ @apply rounded-md;
+ @apply text-sm;
+ @apply flex;
+ @apply font-bold;
+ @apply px-5;
+
+}
+
+
+@media screen and (max-width:400px) {
+  .btn-active{
+    @apply px-4;
+    @apply h-[3rem];
+    @apply text-[0.7rem];
+
+   }
+}
+
+.btn{
+ @apply bg-clr-bg;
+ @apply border-2;
+ @apply border-clr-bg;
+ @apply duration-700;
+ @apply h-fit;
+ @apply mx-2;
+ @apply shadow-none;
+
+}
+
+.btn:hover{
+ @apply border-2;
+ @apply border-clr-text-200;
+ @apply bg-clr-bg;
+ @apply duration-700;
+}
+
+@media screen and (max-width:400px) {
+  .btn{
+    @apply px-4;
+    @apply h-[0.5rem];
+    @apply text-[0.7rem];
+
+   }
+}
+
+
+.list {
+  font-weight: 500;
+  transition: ease-in-out 0.3s;
+}
+
+.list:hover {
+  font-weight: 600;
+  text-decoration: underline;
+}
