@@ -47,7 +47,7 @@ const NavBar = () => {
     
             {/*Login equepment*/}
             <div>
-                <NavLink to="" className={ ({isActive}) => isActive? "btn-active" : "btn"}>Login</NavLink>
+                <NavLink to="/login" className={ ({isActive}) => isActive? "btn-active" : "btn"}>Login</NavLink>
             </div>
 
             {/*Dropdown btn*/}
