@@ -1,11 +1,13 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
+import { AiTwotoneEye, AiTwotoneEyeInvisible } from "react-icons/ai";
 
 const Login = () => {
-  const {logInUser, setUser} = useContext(AuthContext);
+  const [showHide, setShowHide]=useState(false);
+  const {logInUser, setUser, createUserByGoogl} = useContext(AuthContext);
   const handleLogin = (e) => { 
     e.preventDefault();
     const form = new FormData(e.target);
@@ -19,7 +21,7 @@ const Login = () => {
           title: 'Login success',
           text: 'Do you want to continue',
           icon: 'success',
-          confirmButtonText: 'Cool'
+          confirmButtonText: 'Close'
         })
       }
       const data = userData.user
@@ -32,7 +34,7 @@ const Login = () => {
         title: errorCode,
         text: 'Do you want to continue',
         icon: 'error',
-        confirmButtonText: 'Cool'
+        confirmButtonText: 'Close'
       })
       console.log(errorCode);
     })
@@ -40,9 +42,9 @@ const Login = () => {
     return (
         <>
   <div className="hero bg-clr-bg min-h-screen ">
-  <div className="hero-content flex-col lg:flex-row bg-white bg-[url('/Hero-bg.png')] bg-opacity-45 border-2 rounded-3xl">
-    <div className="text-center lg:text-left  backdrop-blur-sm shadow-sm rounded-2xl p-5">
-      <h1 className="text-2xl md:text-5xl font-bold w-full ">Log in now!</h1>
+  <div className="hero-content flex-col lg:flex-row bg-white bg-[url('/doodle.png')]  border-2 rounded-3xl shadow-xl">
+    <div className="text-center lg:text-left  backdrop-blur-lg shadow-xl rounded-2xl p-5">
+      <h1 className="text-2xl md:text-5xl font-bold w-full text-white">Log in now!</h1>
     </div>
     <div className="card bg-base-100 w-full max-w-sm shrink-0 border-2 ">
 
@@ -65,16 +67,17 @@ const Login = () => {
         </div>
         {/* input end */}
 
-
 {/* input start */}
-        <div className="form-control">
-          <label className="label">
+        <div className="form-control relative">
+
+        <label className="label ">
             <span className="label-text">Password</span>
+            <button className="absolute right-0 top-12 p-1 bg-white rounded-xl rounded-xl" onClick={()=>setShowHide(!showHide)}>{showHide?<AiTwotoneEye />:<AiTwotoneEyeInvisible />}</button>
           </label>
 
           <input
           name="password"
-           type="password"
+           type={showHide?'text':'password'}
             placeholder="password"
              className="input input-bordered"
               required />
@@ -96,7 +99,7 @@ const Login = () => {
         </div>
 
         <div className="form-control mt-6">
-          <button className="btn border-2 hover:border-red-400 shadow-xl"> <FcGoogle/> Sign in with google</button>
+          <button onClick={createUserByGoogl} className="btn border-2 hover:border-red-400 shadow-xl"> <FcGoogle/> Continue with google</button>
         </div>
       </form>
     </div>
