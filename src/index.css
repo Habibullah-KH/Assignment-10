@@ -27,7 +27,7 @@
 }
 
 .btn{
- @apply bg-clr-bg;
+ @apply bg-transparent;
  @apply border-2;
  @apply border-clr-bg;
  @apply duration-700;

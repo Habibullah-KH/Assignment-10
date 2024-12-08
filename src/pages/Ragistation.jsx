@@ -1,7 +1,49 @@
+import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Ragistation = () => {
+
+  //* Firebase authentication
+  const {createUser, setUser} = useContext(AuthContext);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = new FormData(e.target);
+        const name = form.get('name');
+        const email = form.get('email');
+        const password = form.get('password');
+        const image = form.get('img');
+
+        //* send data to auth
+        createUser(email, password)
+        .then((userData)=>{
+          if(userData.user){
+            Swal.fire({
+              title: 'Signin success',
+              text: 'Do you want to continue',
+              icon: 'success',
+              confirmButtonText: 'Cool'
+            })
+          }
+          const data = userData.user
+          setUser(data)
+          console.log(data);
+        })
+        .catch((err)=>{
+          const errorCode = err.code;
+          Swal.fire({
+            title: errorCode,
+            text: 'Do you want to continue',
+            icon: 'error',
+            confirmButtonText: 'Cool'
+          })
+          console.log(errorCode);
+        })
+    }
+
     return (
         <>
 <div className="hero bg-clr-bg min-h-screen ">
@@ -13,7 +55,8 @@ const Ragistation = () => {
     <div className="card bg-base-100 w-full max-w-sm shrink-0 border-2 ">
 
         {/* form start */}
-      <form className="card-body bg-clr-bg">
+      <form onSubmit={handleSubmit}
+       className="card-body bg-clr-bg">
 
         
         <div className="form-control">
