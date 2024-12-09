@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import Categori from "../component/Categori";
 
 
 const Home = () => {
     return (
         <>
-        <div>
+        <div>{/*Parent container*/}
 <div className="carousel w-full">
 
 
@@ -60,10 +61,23 @@ const Home = () => {
 
   
 </div>
-<div className="flex w-full justify-center gap-2 py-2">
+<div className="flex w-full justify-center gap-2 py-2 mb-10 border-b-2 border-gray-300">
   <a href="#slide1" className="btn btn-xs">1</a>
   <a href="#slide2" className="btn btn-xs">2</a>
   <a href="#slide3" className="btn btn-xs">3</a>
+</div>
+
+
+<div className="grid grid-cols-2 justify-start">{/*cardsection and card select option*/}
+
+<div className="col-span-2 md:col-span-1">
+    <Categori/>
+</div>
+
+<div className="col-span-2 md:col-span-1">
+    <p>Card container</p>
+</div>
+
 </div>
         </div>
         </>
