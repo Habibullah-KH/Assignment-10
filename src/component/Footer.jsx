@@ -1,9 +1,23 @@
 import { Link } from "react-router-dom";
+import { BiLogoDiscord } from "react-icons/bi";
+import { FaSquareXTwitter, FaYoutube } from "react-icons/fa6";
+import { RiInstagramFill } from "react-icons/ri";
 
 const Footer = () => {
     return (
         <>
    <div className="p-4 flex flex-col items-center text-center">
+
+       {/*Footer contact*/}
+       <div className=" mt-5 text-center m-auto mb-5">
+            <ul className="text-md flex gap-2 items-center justify-center">
+                <Link to="https://www.instagram.com/"><li className="list md:mr-4 p-1 rounded-md bg-slate-200 border-2 border-transparent hover:border-gray-500"><RiInstagramFill /></li></Link>
+                <Link to="https://discord.com/"><li className="list md:mr-4 p-1 rounded-md bg-slate-200 border-2 border-transparent hover:border-gray-500"><BiLogoDiscord /></li></Link>
+                <a href="https://x.com/" target="blank"><li className="list md:mr-4 p-1 rounded-md bg-slate-200 border-2 border-transparent hover:border-gray-500"><FaSquareXTwitter /></li></a>
+                <a href="https://www.youtube.com/watch?v=UpY3cqpYTJQ&t=1015s" target="blank"><li className="list md:mr-4 p-1 rounded-md bg-slate-200 border-2 border-transparent hover:border-gray-500"><FaYoutube /></li></a>
+            </ul>
+        </div> 
+
        {/* Brand Logo and name */}
        <div className="flex justify-center items-center ">
        <img className="w-5 h-5 mr-1 md:w-10 md:h-10" src="/public/logo.png"/>
@@ -12,22 +26,12 @@ const Footer = () => {
 
 <div>
 
-       {/*Footer contact*/}
-       <div className=" mt-5 text-center">
-        <h2 className="text-2xl font-thin">Let&#39;s Connect</h2>
-            <ul className="text-md md:flex items-center justify-center">
-                <Link to="https://www.linkedin.com/"><li className="list md:mr-4">Linkedin</li></Link>
-                <Link to="mailto:support@activeedge.com"><li className="list md:mr-4">Mail</li></Link>
-                <a href="https://x.com/" target="blank"><li className="list md:mr-4">Twitter</li></a>
-                <a href="https://www.youtube.com/watch?v=UpY3cqpYTJQ&t=1015s" target="blank"><li className="list md:mr-4">Youtube</li></a>
-            </ul>
-        </div> 
 
 
         {/*contact info*/}
        <div className=" mt-5 text-center">
         <h2 className="text-2xl font-thin">Contact us</h2>
-            <ul className="text-md ">
+            <ul className="text-md text-gray-600 flex flex-wrap justify-center">
             <Link to="mailto:support@activeedge.com">
             <li className="list font-thin md:mr-4">Email: support@equisports.com</li>
             </Link>

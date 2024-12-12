@@ -1,0 +1,91 @@
+[
+    {
+      "image": "hiking_boots.jpg",
+      "itemName": "Hiking Boots",
+      "categoryName": "Hiking",
+      "description": "Durable and waterproof boots for long hikes.",
+      "price": 120,
+      "rating": 4.8,
+      "customization": "Add extra padding for comfort",
+      "processingTime": "2 days",
+      "stockStatus": 15
+    },
+    {
+      "image": "cricket_bat.jpg",
+      "itemName": "Cricket Bat",
+      "categoryName": "Cricket",
+      "description": "Professional-grade cricket bat made with Kashmir willow.",
+      "price": 90,
+      "rating": 4.6,
+      "customization": "Bat with extra grip",
+      "processingTime": "3 days",
+      "stockStatus": 20
+    },
+    {
+      "image": "football.jpg",
+      "itemName": "Football",
+      "categoryName": "Football",
+      "description": "Official size and weight football for outdoor matches.",
+      "price": 30,
+      "rating": 4.5,
+      "customization": "Add player signature",
+      "processingTime": "1 day",
+      "stockStatus": 25
+    },
+    {
+      "image": "cycling_helmet.jpg",
+      "itemName": "Cycling Helmet",
+      "categoryName": "Cycling",
+      "description": "Lightweight and impact-resistant helmet for safe cycling.",
+      "price": 50,
+      "rating": 4.7,
+      "customization": "Helmet with personalized logo",
+      "processingTime": "2 days",
+      "stockStatus": 10
+    },
+    {
+      "image": "hiking_backpack.jpg",
+      "itemName": "Hiking Backpack",
+      "categoryName": "Hiking",
+      "description": "Spacious and comfortable backpack for long trips.",
+      "price": 70,
+      "rating": 4.9,
+      "customization": "Add water-resistant cover",
+      "processingTime": "2 days",
+      "stockStatus": 12
+    },
+    {
+      "image": "cricket_ball.jpg",
+      "itemName": "Cricket Ball",
+      "categoryName": "Cricket",
+      "description": "High-quality leather ball for professional cricket matches.",
+      "price": 15,
+      "rating": 4.4,
+      "customization": "Custom logo engraving",
+      "processingTime": "1 day",
+      "stockStatus": 30
+    },
+    {
+      "image": "cycling_gloves.jpg",
+      "itemName": "Cycling Gloves",
+      "categoryName": "Cycling",
+      "description": "Breathable and padded gloves for comfortable cycling.",
+      "price": 25,
+      "rating": 4.6,
+      "customization": "Add grip-enhancing material",
+      "processingTime": "2 days",
+      "stockStatus": 18
+    },
+    {
+      "image": "football_kit.jpg",
+      "itemName": "Football Kit",
+      "categoryName": "Football",
+      "description": "Complete football kit including jersey, shorts, and socks.",
+      "price": 60,
+      "rating": 4.7,
+      "customization": "Add custom team name and number",
+      "processingTime": "3 days",
+      "stockStatus": 10
+    }
+  ]
+  

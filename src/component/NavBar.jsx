@@ -21,7 +21,31 @@ const NavBar = () => {
             <img className="w-5 h-5 mr-1 md:w-10 md:h-10" src="/public/logoClr.png"/>
             <h2 className="font-bold md:text-xl">ActiveEdge</h2>
             </div>
-                     
+
+{/* Navigative buttons */}
+ <div className={`hidden lg:flex`} >
+
+<NavLink to="/" 
+className={({isActive}) => isActive?"btn btn-active" : "btn"}>
+    <button>Home</button>
+</NavLink>
+
+<NavLink to="" 
+className={({isActive}) => isActive?"btn btn-active" : "btn"}>
+    <button>All Equipments</button>
+</NavLink>
+
+<NavLink to="" 
+className={({isActive}) => isActive?"btn btn-active" : "btn"}>
+    <button>Add Equipment</button>
+</NavLink>
+
+<NavLink to="" 
+className={({isActive}) => isActive?"btn btn-active" : "btn"}>
+    <button>My Equipment List</button>
+</NavLink>
+</div>      
+{/* Navigative buttons END*/}
 
 
 <div className="text-xl flex items-center gap-5">
@@ -66,12 +90,12 @@ const NavBar = () => {
 
 
             {/*Dropdown btn*/}
-            <div onClick={handleDropdown}>      
+            <div className="lg:hidden" onClick={handleDropdown}>      
             {
                 click?<FiXSquare />:<FiMenu />
             }
 
-<div className={`absolute duration-700 bg-clr-bg bg-opacity-80
+<div className={`absolute duration-700 bg-clr-bg bg-opacity-80 
     ${click? 'top-20':'-top-60'}
     left-0 right-0 shadow-sm z-10 overflow-hidden text-center mx-auto items-center
     flex flex-col md:flex-row justify-center md:p-10
