@@ -27,22 +27,22 @@ const NavBar = () => {
 
 <NavLink to="/" 
 className={({isActive}) => isActive?"btn btn-active" : "btn"}>
-    <button>Home</button>
+    <button type="button">Home</button>
 </NavLink>
 
 <NavLink to="" 
 className={({isActive}) => isActive?"btn btn-active" : "btn"}>
-    <button>All Equipments</button>
+    <button type="button">All Equipments</button>
 </NavLink>
 
 <NavLink to="" 
 className={({isActive}) => isActive?"btn btn-active" : "btn"}>
-    <button>Add Equipment</button>
+    <button type="button">Add Equipment</button>
 </NavLink>
 
 <NavLink to="" 
 className={({isActive}) => isActive?"btn btn-active" : "btn"}>
-    <button>My Equipment List</button>
+    <button type="button">My Equipment List</button>
 </NavLink>
 </div>      
 {/* Navigative buttons END*/}
@@ -103,22 +103,22 @@ className={({isActive}) => isActive?"btn btn-active" : "btn"}>
 
 <NavLink to="/" 
 className={({isActive}) => isActive?"btn btn-active" : "btn"}>
-    <button>Home</button>
+    <button type="button">Home</button>
 </NavLink>
 
 <NavLink to="" 
 className={({isActive}) => isActive?"btn btn-active" : "btn"}>
-    <button>All Equipments</button>
+    <button type="button">All Equipments</button>
 </NavLink>
 
 <NavLink to="" 
 className={({isActive}) => isActive?"btn btn-active" : "btn"}>
-    <button>Add Equipment</button>
+    <button type="button">Add Equipment</button>
 </NavLink>
 
 <NavLink to="" 
 className={({isActive}) => isActive?"btn btn-active" : "btn"}>
-    <button>My Equipment List</button>
+    <button type="button">My Equipment List</button>
 </NavLink>
 </div>
             </div>
