@@ -20,7 +20,7 @@ const Footer = () => {
 
        {/* Brand Logo and name */}
        <div className="flex justify-center items-center ">
-       <img className="w-5 h-5 mr-1 md:w-10 md:h-10" src="/public/logo.png"/>
+       <img className="w-5 h-5 mr-1 md:w-10 md:h-10 " src="/logo.png"/>
        <h2 className="font-bold md:text-xl">ActiveEdge</h2>
        </div>
 

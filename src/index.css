@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +12,7 @@
  @apply py-[0.7rem];
  @apply rounded-md;
  @apply text-sm;
+ @apply text-center;
  @apply flex;
  @apply font-bold;
  @apply px-5;
@@ -22,6 +25,7 @@
     @apply px-4;
     @apply h-[3rem];
     @apply text-[0.7rem];
+    @apply text-black;
 
    }
 }
@@ -46,6 +50,40 @@
 
 @media screen and (max-width:400px) {
   .btn{
+    @apply px-4;
+    @apply h-[0.5rem];
+    @apply text-[0.7rem];
+
+   }
+}
+
+
+
+/** btn for dark */
+
+.btnDark{
+ @apply bg-transparent;
+ @apply text-center;
+ @apply border-2;
+ @apply border-white;
+ @apply text-white;
+ @apply duration-700;
+ @apply h-fit;
+ @apply mx-2;
+ @apply shadow-none;
+
+}
+
+.btnDark:hover{
+ @apply border-2;
+ @apply border-clr-text-200;
+ @apply bg-clr-bg;
+ @apply text-black;
+ @apply duration-700;
+}
+
+@media screen and (max-width:400px) {
+.btnDark{
     @apply px-4;
     @apply h-[0.5rem];
     @apply text-[0.7rem];

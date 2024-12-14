@@ -7,6 +7,7 @@ export const AuthContext = createContext()
 
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
+    const [loding, setLoding] = useState(false);
 
 //* Initialize Firebase Authentication and get a reference to the service
 
@@ -53,6 +54,8 @@ const auth = getAuth(app);
         updateUser,
         createUserByGoogl,
         user,
+        setLoding,
+        loding
     };
     return (
         <>

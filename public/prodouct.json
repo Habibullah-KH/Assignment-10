@@ -1,91 +1,91 @@
 [
-    {
-      "image": "hiking_boots.jpg",
-      "itemName": "Hiking Boots",
-      "categoryName": "Hiking",
-      "description": "Durable and waterproof boots for long hikes.",
-      "price": 120,
-      "rating": 4.8,
-      "customization": "Add extra padding for comfort",
-      "processingTime": "2 days",
-      "stockStatus": 15
-    },
-    {
-      "image": "cricket_bat.jpg",
-      "itemName": "Cricket Bat",
-      "categoryName": "Cricket",
-      "description": "Professional-grade cricket bat made with Kashmir willow.",
-      "price": 90,
-      "rating": 4.6,
-      "customization": "Bat with extra grip",
-      "processingTime": "3 days",
-      "stockStatus": 20
-    },
-    {
-      "image": "football.jpg",
-      "itemName": "Football",
-      "categoryName": "Football",
-      "description": "Official size and weight football for outdoor matches.",
-      "price": 30,
-      "rating": 4.5,
-      "customization": "Add player signature",
-      "processingTime": "1 day",
-      "stockStatus": 25
-    },
-    {
-      "image": "cycling_helmet.jpg",
-      "itemName": "Cycling Helmet",
-      "categoryName": "Cycling",
-      "description": "Lightweight and impact-resistant helmet for safe cycling.",
-      "price": 50,
-      "rating": 4.7,
-      "customization": "Helmet with personalized logo",
-      "processingTime": "2 days",
-      "stockStatus": 10
-    },
-    {
-      "image": "hiking_backpack.jpg",
-      "itemName": "Hiking Backpack",
-      "categoryName": "Hiking",
-      "description": "Spacious and comfortable backpack for long trips.",
-      "price": 70,
-      "rating": 4.9,
-      "customization": "Add water-resistant cover",
-      "processingTime": "2 days",
-      "stockStatus": 12
-    },
-    {
-      "image": "cricket_ball.jpg",
-      "itemName": "Cricket Ball",
-      "categoryName": "Cricket",
-      "description": "High-quality leather ball for professional cricket matches.",
-      "price": 15,
-      "rating": 4.4,
-      "customization": "Custom logo engraving",
-      "processingTime": "1 day",
-      "stockStatus": 30
-    },
-    {
-      "image": "cycling_gloves.jpg",
-      "itemName": "Cycling Gloves",
-      "categoryName": "Cycling",
-      "description": "Breathable and padded gloves for comfortable cycling.",
-      "price": 25,
-      "rating": 4.6,
-      "customization": "Add grip-enhancing material",
-      "processingTime": "2 days",
-      "stockStatus": 18
-    },
-    {
-      "image": "football_kit.jpg",
-      "itemName": "Football Kit",
-      "categoryName": "Football",
-      "description": "Complete football kit including jersey, shorts, and socks.",
-      "price": 60,
-      "rating": 4.7,
-      "customization": "Add custom team name and number",
-      "processingTime": "3 days",
-      "stockStatus": 10
-    }
-  ]
+  {
+    "image": "https://dlcdnwebimgs.asus.com/gain/CF55CEB1-9AD0-4D83-891B-1EECDC60DA2F/w1000/h732",
+    "itemName": "ROG Chakram X",
+    "categoryName": "mouse",
+    "description": "High-precision gaming mouse with customizable DPI and RGB lighting.",
+    "price": 70,
+    "rating": 4.8,
+    "customization": "Add personalized RGB lighting profile",
+    "processingTime": "2 days",
+    "stockStatus": 20
+  },
+  {
+    "image": "https://dlcdnwebimgs.asus.com/gain/145896AC-B462-4466-A1FE-935F085741F3/w1000/h732",
+    "itemName": "ROG Azoth",
+    "categoryName": "keyboard",
+    "description": "Mechanical keyboard with tactile switches and full RGB support.",
+    "price": 120,
+    "rating": 4.9,
+    "customization": "Custom keycap sets available",
+    "processingTime": "3 days",
+    "stockStatus": 15
+  },
+  {
+    "image": "https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/alienware-notebooks/alienware-m16-r2-intel/media-gallery/laptop-aw-m16r2-nt-bk-gallery-3.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=510&qlt=100,1&resMode=sharp2&size=510,402&chrss=full",
+    "itemName": "Alienware M16 Gaming Laptop",
+    "categoryName": "Laptop",
+    "description": "High-performance gaming laptop with NVIDIA RTX 4080 and 240Hz QHD display.",
+    "price": 2500,
+    "rating": 4.7,
+    "customization": "Upgrade storage or RAM",
+    "processingTime": "5 days",
+    "stockStatus": 10
+  },
+  {
+    "image": "https://www.asus.com/media/global/products/x2ahzOXdioDZggLv/P_setting_xxx_0_90_end_500.png",
+    "itemName": "ASUS TUF Gaming VG27AQ Monitor",
+    "categoryName": "Monitor",
+    "description": "27-inch QHD monitor with 165Hz refresh rate and Adaptive-Sync support.",
+    "price": 400,
+    "rating": 4.8,
+    "customization": "Add monitor arm or stand",
+    "processingTime": "2 days",
+    "stockStatus": 18
+  },
+  {
+    "image": "https://media.steelseriescdn.com/thumbs/filer_public/03/09/03097944-cd1e-4683-9145-e473c934f2a8/purchase-gallery-apro-wireless__white-hero.png__1850x800_crop-scale_optimize_subsampling-2.png",
+    "itemName": "SteelSeries Arctis Pro Wireless Headset",
+    "categoryName": "Headset",
+    "description": "Dual wireless system headset with Hi-Res audio and clearcast microphone.",
+    "price": 330,
+    "rating": 4.7,
+    "customization": "Choose custom earcup colors",
+    "processingTime": "2 days",
+    "stockStatus": 25
+  },
+  {
+    "image": "https://images.secretlab.co/theme/common/tr:n-w_600/TTEVO_Gallery_04.jpg",
+    "itemName": "Secretlab Titan Evo 2024 Chair",
+    "categoryName": "Chair",
+    "description": "Ergonomic gaming chair with 4D armrests and premium leatherette.",
+    "price": 500,
+    "rating": 4.6,
+    "customization": "Choose custom upholstery designs",
+    "processingTime": "3 days",
+    "stockStatus": 12
+  },
+  {
+    "image": "https://resource.logitech.com/w_692,c_lpad,ar_4:3,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/logitech/en/products/webcams/streamcam/gallery/streamcam-gallery-4-graphite.png?v=1",
+    "itemName": "Logitech StreamCam",
+    "categoryName": "Camera",
+    "description": "1080p high-definition webcam with smart auto-focus and dual mics for streaming.",
+    "price": 130,
+    "rating": 4.5,
+    "customization": "Add personalized camera overlay templates",
+    "processingTime": "2 days",
+    "stockStatus": 20
+  },
+  {
+    "image": "https://dlcdnwebimgs.asus.com/gain/6CE873C8-A139-4449-8756-7643C4F07B94/w1000/h732",
+    "itemName": "ASUS ROG NUC 970 Mini Gaming PC",
+    "categoryName": "Desktop",
+    "description": "Compact mini gaming PC featuring Intel Core Ultra 9 and NVIDIA RTX 4070.",
+    "price": 1629,
+    "rating": 4.8,
+    "customization": "Upgrade RAM or storage options",
+    "processingTime": "5 days",
+    "stockStatus": 10
+  }
   
+]

@@ -15,10 +15,10 @@ const NavBar = () => {
     }
     return (
         <>
-        <div className="flex justify-between items-center p-4 backdrop-blur-3xl bg-clr-bg bg-opacity-80">
+        <div className="flex justify-between items-center p-4 backdrop-blur-3xl bg-clr-bg bg-opacity-80 ">
             {/* Brand Logo and name */}
             <div className="flex justify-center items-center">
-            <img className="w-5 h-5 mr-1 md:w-10 md:h-10" src="/public/logoClr.png"/>
+            <img className="w-5 h-5 mr-1 md:w-10 md:h-10" src="/logoClr.png"/>
             <h2 className="font-bold md:text-xl">ActiveEdge</h2>
             </div>
 

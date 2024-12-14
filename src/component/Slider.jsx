@@ -15,16 +15,16 @@ const Slider = () => {
   useEffect(() => {
     const slideElement = document.getElementById(`slide${activeSlide}`);
     if (slideElement) {
-      slideElement.scrollIntoView({ behavior: 'smooth' });
+      // slideElement.scrollIntoView({ behavior: 'smooth' });
     }
   }, [activeSlide]);
 
     return (
         <>
-            <div className="carousel min-h-32">{/*carousel container parent*/}
-  <div id="slide1" className={`carousel-item relative w-full `}>
+            <div className="carousel w-full mx-auto bg-gradient-to-r from-purple-100 to-pink-00">{/*carousel container parent*/}
+  <div id="slide1" className={`carousel-item relative w-full`}>
 
-    <div className='md:flex justify-between items-center'>{/*parent div*/}
+    <div className='md:flex justify-between items-center mx-auto '>
       <div className='p-5'>{/*text container*/}
       <h2 className='font-semibold text-xl md:text-3xl'>ROG Strix GeForce RTX™ 4090 OC Edition 24GB GDDR6X</h2>
       <p className='text-sm'>ROG Strix GeForce RTX® 4090 OC Edition 24GB GDDR6X with DLSS 3 and chart-topping thermal performance</p>
@@ -45,10 +45,10 @@ const Slider = () => {
     </div>
   </div>
 
-  <div id="slide2" className="carousel-item relative w-full">
+  <div id="slide2" className={`carousel-item relative w-full`}>
 
-  <div className='md:flex justify-between items-center'>{/*parent div*/}
-      <div className='p-5'>{/*text container*/}
+  <div className='md:flex justify-between items-center mx-auto '>{/*parent div*/}
+      <div className='p-5 '>{/*text container*/}
       <h2 className='font-semibold text-xl md:text-3xl'>ROG Strix SCAR 17 X3D (2023) G733</h2>
       <p className='text-sm'>GA605WV-0103HSTRIX-12C</p>
       <a href="https://rog.asus.com/" target='_blank'><button className='btn border-2 border-gray-800'>Learn more</button></a>
@@ -67,8 +67,8 @@ const Slider = () => {
     </div>
   </div>
 
-  <div id="slide3" className="carousel-item relative w-full">
-  <div className='md:flex justify-between items-center'>{/*parent div*/}
+  <div id="slide3" className={`carousel-item relative w-full`}>
+  <div className='md:flex justify-between items-center mx-auto'>{/*parent div*/}
       <div className='p-5'>{/*text container*/}
       <h2 className='font-semibold text-xl md:text-3xl'>ROG Keris Wireless AimPoint</h2>
       <a href="https://rog.asus.com/" target='_blank'><button className='btn'>Learn more</button></a>
