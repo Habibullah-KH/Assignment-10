@@ -1,18 +1,21 @@
 import { useState } from "react";
-import { Navigate } from "react-router-dom";
+import DreamCategoryItem from "./DreamCategoryItem";
+import { useNavigate } from "react-router-dom";
+
 const DreamSetup = () => {
     const [selectedOption, setSelectedOption] = useState("All");
+    const navigate = useNavigate();
 
     const handleChange = (e) => {
         setSelectedOption(e.target.value);
-
+        
             // Navigate to the route based on the selected option
-            Navigate(`/category/${selectedOption.toLowerCase()}`);
-    };
+            navigate(`/category/${e.target.value}`);
+        };
 
     return (
         <>
-                <div className="my-44">{/*main container*/}
+                <div className="mt-44">{/*main container*/}
           <h3 className="p-3 text-red-700">DREAM SETUP</h3>
           <div className="flex flex-col items-center bg-gray-900 text-white rounded-t-2xl text-center">{/*parent*/}
             <div className="my-5"> {/*text container*/}
@@ -34,19 +37,25 @@ const DreamSetup = () => {
     onChange={handleChange}
     value={selectedOption}
 >
-    <option value="All">All</option>
+<option value="All">All</option>
     <option value="Laptop">Laptop</option>
-    <option value="Laptop">Desktop</option>
-    <option value="Laptop">Camera</option>
-    <option value="Laptop">Monitor</option>
-    <option value="Keyboard">keyboard</option>
-    <option value="Mouse">mouse</option>
+    <option value="Desktop">Desktop</option>
+    <option value="Camera">Camera</option>
+    <option value="Monitor">Monitor</option>
+    <option value="Keyboard">Keyboard</option>
+    <option value="Mouse">Mouse</option>
     <option value="Headset">Headset</option>
     <option value="Chair">Chair</option>
 </select>
 
 </div>      
 {/* filter radio buttons END*/}
+
+
+<div className="mb-10">
+    <DreamCategoryItem/>
+</div>
+
 
           </div>{/*parent end*/}
         </div>{/*main container end*/}

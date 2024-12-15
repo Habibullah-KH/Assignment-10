@@ -58,40 +58,6 @@
 }
 
 
-
-/** btn for dark */
-
-.btnDark{
- @apply bg-transparent;
- @apply text-center;
- @apply border-2;
- @apply border-white;
- @apply text-white;
- @apply duration-700;
- @apply h-fit;
- @apply mx-2;
- @apply shadow-none;
-
-}
-
-.btnDark:hover{
- @apply border-2;
- @apply border-clr-text-200;
- @apply bg-clr-bg;
- @apply text-black;
- @apply duration-700;
-}
-
-@media screen and (max-width:400px) {
-.btnDark{
-    @apply px-4;
-    @apply h-[0.5rem];
-    @apply text-[0.7rem];
-
-   }
-}
-
-
 .list {
   font-weight: 500;
   transition: ease-in-out 0.3s;

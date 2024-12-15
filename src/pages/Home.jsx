@@ -3,6 +3,7 @@ import CardContainer from "../component/CardContainer";
 import Slider from "../component/Slider";
 import Loding from "./Loding";
 import DreamSetup from "../component/DreamSetup";
+import Offer from "../component/Offer";
 
 const Home = () => {
 
@@ -29,10 +30,13 @@ const Home = () => {
           {product.length === 0 ? <Loding/> : <CardContainer datas={product} />}
         </div>
 
-        {/* additional 1 */}
-        <DreamSetup/>
+{/* additional 1 */}
+    <DreamSetup/>
+{/* additional 1 end*/}
 
-
+{/* aditional page 2 */}
+    <Offer/>
+{/* aditional page 2 end*/}
 
       </div>
     </>

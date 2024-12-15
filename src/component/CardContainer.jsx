@@ -1,7 +1,6 @@
 import Card from "./Card";
 import PropTypes from 'prop-types';  
 const CardContainer = ({datas}) => {
-    console.log(datas);
     return (
         <>
         <div className="flex flex-wrap justify-center gap-3 my-20">
