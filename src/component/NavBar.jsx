@@ -26,22 +26,22 @@ const NavBar = () => {
  <div className={`hidden lg:flex`} >
 
 <NavLink to="/" 
-className={({isActive}) => isActive?"btn btn-active" : "btn"}>
+className={({isActive}) => isActive?"btn-active" : "btn"}>
     <button type="button">Home</button>
 </NavLink>
 
-<NavLink to="" 
-className={({isActive}) => isActive?"btn btn-active" : "btn"}>
+<NavLink to="/allEquepment" 
+className={({isActive}) => isActive?"btn-active" : "btn"}>
     <button type="button">All Equipments</button>
 </NavLink>
 
 <NavLink to="/addEquepment" 
-className={({isActive}) => isActive?"btn btn-active" : "btn"}>
+className={({isActive}) => isActive?"btn-active" : "btn"}>
     <button type="button">Add Equipment</button>
 </NavLink>
 
-<NavLink to="" 
-className={({isActive}) => isActive?"btn btn-active" : "btn"}>
+<NavLink to={`/equipment/${user?.email}`}
+className={({isActive}) => isActive?"btn-active" : "btn"}>
     <button type="button">My Equipment List</button>
 </NavLink>
 </div>      
@@ -99,22 +99,22 @@ className={({isActive}) => isActive?"btn btn-active" : "btn"}>
     `} >
 
 <NavLink to="/" 
-className={({isActive}) => isActive?"btn btn-active" : "btn"}>
+className={({isActive}) => isActive?"btn-active" : "btn"}>
     <button type="button">Home</button>
 </NavLink>
 
-<NavLink to="" 
-className={({isActive}) => isActive?"btn btn-active" : "btn"}>
+<NavLink to="/allEquepment" 
+className={({isActive}) => isActive?"btn-active" : "btn"}>
     <button type="button">All Equipments</button>
 </NavLink>
 
 <NavLink to="/addEquepment" 
-className={({isActive}) => isActive?"btn btn-active" : "btn"}>
+className={({isActive}) => isActive?"btn-active" : "btn"}>
     <button type="button">Add Equipment</button>
 </NavLink>
 
-<NavLink to="" 
-className={({isActive}) => isActive?"btn btn-active" : "btn"}>
+<NavLink to={`/equipment/${user?.email}`}
+className={({isActive}) => isActive?"btn-active" : "btn"}>
     <button type="button">My Equipment List</button>
 </NavLink>
 </div>

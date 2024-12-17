@@ -83,7 +83,7 @@ console.log(location);
 
         <label className="label ">
             <span className="label-text">Password</span>
-            <button type="button" className="absolute right-0 top-12 p-1 bg-white rounded-xl rounded-xl" onClick={()=>setShowHide(!showHide)}>{showHide?<AiTwotoneEye />:<AiTwotoneEyeInvisible />}</button>
+            <span className="absolute right-0 top-12 p-1 bg-white rounded-xl cursor-pointer" onClick={()=>setShowHide(!showHide)}>{showHide?<AiTwotoneEye />:<AiTwotoneEyeInvisible />}</span>
           </label>
 
           <input

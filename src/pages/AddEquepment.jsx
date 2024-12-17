@@ -7,6 +7,8 @@ const AddEquepment = () => {
 
     const categoryRef = useRef(null);
     const ratingRef = useRef(null);
+    const processRef = useRef(null);
+    const customizeRef = useRef(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,16 +17,19 @@ const AddEquepment = () => {
     const name = form.get('name');
     const item = form.get('item');
     const image = form.get('image');
+    const Stock = parseInt(form.get('Stock'));
 
     const category = categoryRef.current.value;
     const rating = parseFloat(ratingRef.current.value);
+    const process = parseFloat(processRef.current.value);
+    const customize = customizeRef.current.value;
 
     const description = form.get('description');
     const price = parseFloat(form.get('price')); 
     
     const urlRegex = /^https?:\/\/.*$/i;
 
-    const Newequepment = {email, name, item, image, description, price, category, rating};
+    const Newequepment = {email, name, item, image, description, price, category, rating, process, Stock, customize};
     if (!urlRegex.test(image)) {
         Swal.fire({
             title: 'Please provide a valid image link',
@@ -43,6 +48,25 @@ const AddEquepment = () => {
       })
         return;
       }
+
+      if(price < 0 || price === 0){
+        Swal.fire({
+            title: 'Please provide a valid price',
+            icon: 'error',
+            confirmButtonText: 'Close',
+      })
+        return;
+      }
+
+    if (isNaN(Stock) || Stock <= 0) {
+    Swal.fire({
+        title: 'Invalid Stock',
+        text: 'Stock must be a positive number.',
+        icon: 'error',
+        confirmButtonText: 'Close'
+    });
+    return;
+}
 console.log(Newequepment);
 
 //* send data to backend
@@ -58,7 +82,7 @@ console.log(Newequepment);
     .then(data => {
         if(data){
             Swal.fire({
-              title: 'Login success',
+              title: 'submit success',
               text: 'Do you want to continue',
               icon: 'success',
               confirmButtonText: 'Close'
@@ -117,8 +141,8 @@ console.log(Newequepment);
           <label className="label">
             <span className="label-text text-md text-black font-bold md:text-xl">Image link</span>
           </label>
-          <input name="image" type="text" placeholder="Item Name" className="input input-bordered" />
-        </div>
+          <input name="image" type="text" placeholder="Item Name" className="input input-bordered" required />
+          </div>
 
 {/* Description */}
         <div className="form-control">
@@ -128,7 +152,15 @@ console.log(Newequepment);
           <input name="description" type="text" placeholder="Description" className="input input-bordered" required />
         </div>
 
-{/* categoryy name */}
+{/* Stock Status */}
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text text-md text-black font-bold md:text-xl">Stock</span>
+          </label>
+          <input name="Stock" type="number" placeholder="Stock Status" className="input input-bordered" required />
+        </div>
+
+{/* category name */}
         <div className="form-control">
           <label className="label">
             <span className="label-text text-md text-black font-bold md:text-xl">Category Name</span>
@@ -174,13 +206,75 @@ ref={ratingRef}
 </select>
 </div>
 
-{/* Price */}
-<div className="form-control">
+
+
+{/* Processing Time */}
+<div className="form-control relative">
           <label className="label">
-            <span className="label-text text-md text-black font-bold md:text-xl">Price</span>
+            <span className="label-text text-md text-black font-bold md:text-xl ">Processing Time</span>
           </label>
-          <input name="price" type="number" placeholder="Price" className="input input-bordered" required />
+
+<select
+
+ref={processRef}
+    className="text-black py-3  rounded-lg text-center"
+>
+  <option value="5">5</option>
+  <option value="7">7</option>
+  <option value="15">15</option>
+  <option value="30">30</option>
+  <option value="45">45</option>
+</select>
+  <span className="absolute right-5 top-[74%] text-sm transform -translate-y-1/2 text-gray-500 font-bold pointer-events-none">
+      Days
+    </span>
 </div>
+
+
+
+{/* customize */}
+<div className="form-control relative">
+          <label className="label">
+            <span className="label-text text-md text-black font-bold md:text-xl ">Customize item</span>
+          </label>
+
+<select
+
+ref={customizeRef}
+    className="text-black py-3  rounded-lg text-center"
+
+  
+>
+  <option value="Extra 2x ram">Extra 2x ram</option>
+  <option value="Extra 1set keycap">Extra 1set keycap</option>
+  <option value="Mouse Pad">Mouse Pad</option>
+  <option value="No customizetion">No customizetion</option>
+</select>
+
+</div>
+
+
+
+
+{/* Price */}
+<div className="form-control relative">
+  <label className="label">
+    <span className="label-text text-md text-black font-bold md:text-xl">Price</span>
+  </label>
+  <div className="relative">
+    <input 
+      name="price" 
+      type="number" 
+      placeholder="Price" 
+      className="input input-bordered w-full pr-8" 
+      required 
+    />
+    <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 font-bold pointer-events-none">
+      $
+    </span>
+  </div>
+</div>
+
 
 {/*submit*/}
 <div className="col-span-2">

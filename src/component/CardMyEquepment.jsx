@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-const Card = ({data}) => {
-    const {stockStatus, customization, processingTime, rating, price, description, categoryName, itemName, image, _id}=data;
-
+const CardMyEquepment = ({data}) => {
+    const {customization, processingTime, rating, price, description, categoryName, itemName, image, _id}=data;
+console.log(data);
     return (
         <>
-        <div className="card bg-base-100 w-96 shadow-xl">
+<div className="card bg-base-100 w-96 shadow-xl">
   <figure>
     <img
       src={image}
@@ -25,4 +25,4 @@ const Card = ({data}) => {
     );
 };
 
-export default Card;
+export default CardMyEquepment;

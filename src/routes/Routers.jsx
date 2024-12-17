@@ -7,6 +7,8 @@ import Details from "../pages/Details";
 import DreamCategoryItem from "../component/DreamCategoryItem";
 import PrivateRoute from "../PrivateRoute";
 import AddEquepment from "../pages/AddEquepment";
+import Myequipment from "../pages/Myequipment";
+import Allequepment from "../pages/Allequepment";
 
 const Routers = createBrowserRouter([
     {
@@ -52,7 +54,21 @@ const Routers = createBrowserRouter([
         <PrivateRoute>
             <AddEquepment/>
         </PrivateRoute>
-    }
+    },
+    {
+        path: "/allEquepment",
+        element: 
+        <Allequepment/>
+    },
+    {
+        path: "/equipment/:user",
+        element: 
+        <PrivateRoute>
+        <Myequipment/>
+    </PrivateRoute>
+        ,
+        loader:({params}) => fetch(`http://localhost:8000/equipment/${params.user}`)
+    },
 ]},
 ]);
 
