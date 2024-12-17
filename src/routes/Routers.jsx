@@ -1,22 +1,35 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home";
 import Ragistation from "../pages/Ragistation";
 import Login from "../pages/Login";
 import Details from "../pages/Details";
 import DreamCategoryItem from "../component/DreamCategoryItem";
+import PrivateRoute from "../PrivateRoute";
+import AddEquepment from "../pages/AddEquepment";
 
 const Routers = createBrowserRouter([
     {
     path: "/",
     element: <MainLayout/>,
-    children: [{
+    children: [
+        {
+            path: "/",
+            element: <Navigate to='/category/All'/>
+        },
+        {
         path: "/",
         element: <Home/>,
-        children: [{
+        children: [
+            {
+                path: "/",
+                element: <Navigate to='/category/All'/>
+            },
+            {
             path: "/category/:category",
             element: <DreamCategoryItem/>,
             loader: ({params}) => {fetch(`http://localhost:8000/category/${params.category}`);}
+
         },
     ]},
 
@@ -33,6 +46,13 @@ const Routers = createBrowserRouter([
         element: <Details/>,
         loader:({params}) => fetch(`http://localhost:8000/user/${params.id}`)
     },
+    {
+        path: "/addEquepment",
+        element: 
+        <PrivateRoute>
+            <AddEquepment/>
+        </PrivateRoute>
+    }
 ]},
 ]);
 

@@ -35,7 +35,7 @@ className={({isActive}) => isActive?"btn btn-active" : "btn"}>
     <button type="button">All Equipments</button>
 </NavLink>
 
-<NavLink to="" 
+<NavLink to="/addEquepment" 
 className={({isActive}) => isActive?"btn btn-active" : "btn"}>
     <button type="button">Add Equipment</button>
 </NavLink>
@@ -57,10 +57,7 @@ className={({isActive}) => isActive?"btn btn-active" : "btn"}>
 <div className="flex items-center">
 
 
-    <div className={`p-5 hidden lg:block
-    `}>
-        <p> {user?.displayName}</p>
-    </div>
+
     <div onClick={()=>setVisit(!visit)}
      className="text-sm flex items-center gap-2 mx-auto p-3">
         <img  src={user?.photoURL}
@@ -68,7 +65,7 @@ className={({isActive}) => isActive?"btn btn-active" : "btn"}>
     </div>
 
     <div className={`
-    duration-700 rounded-lg lg:flex lg:hidden
+    duration-700 rounded-lg
     p-5 border-2 border-gray-300 text-sm right-5
     absolute ${visit? 'top-20' : '-top-60'}
     `}>
@@ -111,7 +108,7 @@ className={({isActive}) => isActive?"btn btn-active" : "btn"}>
     <button type="button">All Equipments</button>
 </NavLink>
 
-<NavLink to="" 
+<NavLink to="/addEquepment" 
 className={({isActive}) => isActive?"btn btn-active" : "btn"}>
     <button type="button">Add Equipment</button>
 </NavLink>

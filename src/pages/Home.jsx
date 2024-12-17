@@ -26,7 +26,6 @@ const Home = () => {
 
         {/* Cards */}
         <div>
-          {/* Show a loading message if no data has been fetched yet */}
           {product.length === 0 ? <Loding/> : <CardContainer datas={product} />}
         </div>
 

@@ -1,7 +1,7 @@
 import CategoriCard from "./CategoriCard";
 
 const Category = ({data}) => {
-    console.log(data);
+
     return (
         <>
         <div className="flex flex-wrap items-center justify-center gap-5 ">

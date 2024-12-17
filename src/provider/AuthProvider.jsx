@@ -7,13 +7,15 @@ export const AuthContext = createContext()
 
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
-    const [loding, setLoding] = useState(false);
+    const [loding, setLoding] = useState(true);
+    const [success, setSuccess] = useState(false);
 
 //* Initialize Firebase Authentication and get a reference to the service
 
 const auth = getAuth(app);
     //* SignIn with email and password
     const createUser = (email, password) => {
+        setLoding(true)
    return createUserWithEmailAndPassword(auth, email, password);
     }
 
@@ -25,11 +27,13 @@ const auth = getAuth(app);
 
     //* login with email and password
     const logInUser = (email, password) => {
+        setLoding(true)
     return signInWithEmailAndPassword(auth, email, password);
     }
 
     //*logout
     const logOut = () => {
+        setLoding(true)
         return signOut(auth);
     }
 
@@ -42,6 +46,8 @@ const auth = getAuth(app);
     useEffect(()=>{
         const unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
             setUser(currentUser)
+            setLoding(false)
+            setSuccess(true)
         })
         return()=>{unsubscribe()}
     }, [auth])
@@ -54,8 +60,10 @@ const auth = getAuth(app);
         updateUser,
         createUserByGoogl,
         user,
+        loding,
         setLoding,
-        loding
+        success,
+        setSuccess,
     };
     return (
         <>

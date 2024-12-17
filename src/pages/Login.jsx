@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 import { AiTwotoneEye, AiTwotoneEyeInvisible } from "react-icons/ai";
@@ -8,14 +8,20 @@ import { AiTwotoneEye, AiTwotoneEyeInvisible } from "react-icons/ai";
 const Login = () => {
   const [showHide, setShowHide]=useState(false);
   const {logInUser, setUser, createUserByGoogl} = useContext(AuthContext);
+const location = useLocation();
+const naviget = useNavigate();
+console.log(location);
+
   const handleLogin = (e) => { 
     e.preventDefault();
     const form = new FormData(e.target);
     const email = form.get('email');
     const password = form.get('password');
     console.log(email);
+
     logInUser(email, password)
     .then((userData)=>{
+
       if(userData.user){
         Swal.fire({
           title: 'Login success',
@@ -24,10 +30,13 @@ const Login = () => {
           confirmButtonText: 'Close'
         })
       }
+
       const data = userData.user
       setUser(data)
+      naviget(location?.state ? location.state : "/");
       console.log(data);
     })
+
     .catch((err)=>{
       const errorCode = err.code;
       Swal.fire({
@@ -39,6 +48,8 @@ const Login = () => {
       console.log(errorCode);
     })
    };
+
+
     return (
         <>
   <div className="hero bg-clr-bg min-h-screen ">
@@ -72,7 +83,7 @@ const Login = () => {
 
         <label className="label ">
             <span className="label-text">Password</span>
-            <button className="absolute right-0 top-12 p-1 bg-white rounded-xl rounded-xl" onClick={()=>setShowHide(!showHide)}>{showHide?<AiTwotoneEye />:<AiTwotoneEyeInvisible />}</button>
+            <button type="button" className="absolute right-0 top-12 p-1 bg-white rounded-xl rounded-xl" onClick={()=>setShowHide(!showHide)}>{showHide?<AiTwotoneEye />:<AiTwotoneEyeInvisible />}</button>
           </label>
 
           <input

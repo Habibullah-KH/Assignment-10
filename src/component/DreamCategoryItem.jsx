@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Category from "./Category";
+import Loding from "../pages/Loding";
 
 const DreamCategoryItem = () => {
     const [prodouct, setProduct] = useState([]);
@@ -13,7 +14,10 @@ const DreamCategoryItem = () => {
 
     return (
         <>
-        <Category data={prodouct}/>
+        {
+            prodouct.length === 0 ? <Loding/> : <Category data={prodouct}/>
+        }
+        
         </>
     );
 };
