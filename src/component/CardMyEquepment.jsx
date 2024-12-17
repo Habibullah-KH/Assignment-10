@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 
 const CardMyEquepment = ({data}) => {
-    const {customization, processingTime, rating, price, description, categoryName, itemName, image, _id}=data;
-console.log(data);
+    console.log(data);
+const {stockStatus, customization, processingTime, rating, price, description, categoryName, itemName, image, _id}=data || {};
+
     return (
         <>
-<div className="card bg-base-100 w-96 shadow-xl">
+<div className="card bg-base-100 min-h-[500px] w-96 shadow-xl text-black text-wrap">
   <figure>
     <img
+    className="h-64"
       src={image}
       alt="photo" />
   </figure>

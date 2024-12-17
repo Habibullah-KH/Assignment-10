@@ -4,7 +4,6 @@ import Swal from "sweetalert2";
 
 const AddEquepment = () => {
     const {user} = useContext(AuthContext);
-
     const categoryRef = useRef(null);
     const ratingRef = useRef(null);
     const processRef = useRef(null);
@@ -15,21 +14,21 @@ const AddEquepment = () => {
       const form = new FormData(e.target);
     const email = form.get('email');
     const name = form.get('name');
-    const item = form.get('item');
+    const itemName = form.get('item');
     const image = form.get('image');
-    const Stock = parseInt(form.get('Stock'));
+    const stockStatus = parseInt(form.get('Stock'));
 
-    const category = categoryRef.current.value;
+    const categoryName = categoryRef.current.value;
     const rating = parseFloat(ratingRef.current.value);
-    const process = parseFloat(processRef.current.value);
-    const customize = customizeRef.current.value;
+    const processingTime = parseFloat(processRef.current.value);
+    const customization = customizeRef.current.value;
 
     const description = form.get('description');
     const price = parseFloat(form.get('price')); 
     
     const urlRegex = /^https?:\/\/.*$/i;
 
-    const Newequepment = {email, name, item, image, description, price, category, rating, process, Stock, customize};
+    const Newequepment = {email, name, itemName, image, description, price, categoryName, rating, processingTime, stockStatus, customization};
     if (!urlRegex.test(image)) {
         Swal.fire({
             title: 'Please provide a valid image link',
@@ -58,7 +57,7 @@ const AddEquepment = () => {
         return;
       }
 
-    if (isNaN(Stock) || Stock <= 0) {
+    if (isNaN(stockStatus) || stockStatus <= 0) {
     Swal.fire({
         title: 'Invalid Stock',
         text: 'Stock must be a positive number.',

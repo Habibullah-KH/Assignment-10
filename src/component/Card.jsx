@@ -5,14 +5,15 @@ const Card = ({data}) => {
 
     return (
         <>
-        <div className="card bg-base-100 w-96 shadow-xl">
+        <div className="card bg-base-100 min-h-[500px] w-96 shadow-xl">
   <figure>
     <img
+    className="h-64"
       src={image}
       alt="photo" />
   </figure>
-  <div className="card-body">
-    <h2 className="card-title">{itemName}</h2>
+  <div className="card-body text-center">
+    <h2 className="card-title text-center">{itemName}</h2>
     <p>{description}</p>
     <div className="card-actions justify-end">
       <Link to={`/user/${_id}`}>
