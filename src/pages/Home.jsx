@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider"
 import CardContainer from "../component/CardContainer";
 import Slider from "../component/Slider";
 import Loding from "./Loding";
@@ -6,16 +7,26 @@ import DreamSetup from "../component/DreamSetup";
 import Offer from "../component/Offer";
 
 const Home = () => {
+  const {user} = useContext(AuthContext);
 
-  const [product, setProduct] = useState([]);
-
+  const [equipment, setEquipment] = useState([]);
+    
   useEffect(() => {
-    // Fetch the data and update the state
-    fetch('http://localhost:8000/myprodouct')
-      .then(res => res.json())
-      .then(data => setProduct(data))
-      .catch(err => console.error("Error fetching data:", err));
-  }, []); 
+      const fetchData = async () => {
+          try {
+              const userEmail = user?.email || '';
+              const response = await fetch(`http://localhost:8000/equipment?user=${userEmail}`);
+              const data = await response.json();
+              setEquipment(data);
+            } catch (error) {
+              console.error("Error fetching equipment data:", error);
+            }
+          };
+          
+          fetchData();
+        }, [user]);
+        
+
 
   return (
     <>
@@ -26,7 +37,8 @@ const Home = () => {
 
         {/* Cards */}
         <div>
-          {product.length === 0 ? <Loding/> : <CardContainer datas={product} />}
+          {/* Show a loading message if no data has been fetched yet */}
+          {equipment.length === 0 ? <Loding/> : <CardContainer datas={equipment} />}
         </div>
 
 {/* additional 1 */}

@@ -45,7 +45,7 @@ const Routers = createBrowserRouter([
     },
     {
         path: "/user/:id",
-        element: <Details/>,
+        element: <PrivateRoute><Details/></PrivateRoute>,
         loader:({params}) => fetch(`http://localhost:8000/user/${params.id}`)
     },
     {
@@ -63,7 +63,7 @@ const Routers = createBrowserRouter([
     {
         path: "/equipment/:user",
         element: 
-        <PrivateRoute>
+    <PrivateRoute>
         <Myequipment/>
     </PrivateRoute>
         ,

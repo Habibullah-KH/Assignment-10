@@ -6,23 +6,33 @@ const {stockStatus, customization, processingTime, rating, price, description, c
 
     return (
         <>
-<div className="card bg-base-100 min-h-[500px] w-96 shadow-xl text-black text-wrap">
-  <figure>
-    <img
-    className="h-64"
-      src={image}
-      alt="photo" />
-  </figure>
-  <div className="card-body">
-    <h2 className="card-title">{itemName}</h2>
-    <p>{description}</p>
-    <div className="card-actions justify-end">
+      <tr>
+        <th>
+        </th>
+        <td>
+          <div className="md:flex items-center gap-3">
+            <div  className="overflow-x-auto">
+              <div className="mask mask-squircle h-12 w-12">
+                <img
+                  src={image}
+                  alt="prodouct" />
+              </div>
+            </div>
+            <div>
+              <div className="font-bold">{itemName}</div>
+            </div>
+          </div>
+        </td>
+        <td>
+        {categoryName}
+        </td>
+        <td>{price}</td>
+        <th>
       <Link to={`/user/${_id}`}>
-      <button className="btn border-2 border-black">Learn more</button>
+      <button className="btn btn-ghost btn-xs">Learn more</button>
       </Link>
-    </div>
-  </div>
-</div>
+        </th>
+      </tr>
         </>
     );
 };
