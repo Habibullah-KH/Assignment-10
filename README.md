@@ -16,4 +16,4 @@ ActiveEdge is an innovative online store dedicated to providing high-quality spo
 
 - One-Click Purchase: Streamlined checkout process for a hassle-free shopping experience.
 
-[Live link]()
+[Live link](https://ph-10-as-54712.web.app/category/All)
