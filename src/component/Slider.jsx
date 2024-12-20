@@ -21,14 +21,14 @@ const Slider = () => {
 
     return (
         <>
-            <div className="carousel w-full mx-auto bg-gradient-to-r from-purple-100 to-pink-00">{/*carousel container parent*/}
+            <div className="carousel w-full mx-auto bg-gradient-to-r from-purple-200 to-pink-100 text-black">{/*carousel container parent*/}
   <div id="slide1" className={`carousel-item relative w-full`}>
 
     <div className='md:flex justify-between items-center mx-auto '>
       <div className='p-5'>{/*text container*/}
       <h2 className='font-semibold text-xl md:text-3xl'>ROG Strix GeForce RTX™ 4090 OC Edition 24GB GDDR6X</h2>
       <p className='text-sm'>ROG Strix GeForce RTX® 4090 OC Edition 24GB GDDR6X with DLSS 3 and chart-topping thermal performance</p>
-      <a href="https://rog.asus.com/" target='_blank'><button className='btn'>Learn more</button></a>
+      <a href="https://rog.asus.com/" target='_blank'><button className='btn'> <span className='text-black'>Learn more</span></button></a>
       </div>
 
       <div>{/*image container*/}
@@ -51,7 +51,7 @@ const Slider = () => {
       <div className='p-5 '>{/*text container*/}
       <h2 className='font-semibold text-xl md:text-3xl'>ROG Strix SCAR 17 X3D (2023) G733</h2>
       <p className='text-sm'>GA605WV-0103HSTRIX-12C</p>
-      <a href="https://rog.asus.com/" target='_blank'><button className='btn border-2 border-gray-800'>Learn more</button></a>
+      <a href="https://rog.asus.com/" target='_blank'><button className='btn'> <span className='text-black'>Learn more</span></button></a>
       </div>
 
       <div>{/*image container*/}
@@ -71,7 +71,7 @@ const Slider = () => {
   <div className='md:flex justify-between items-center mx-auto'>{/*parent div*/}
       <div className='p-5'>{/*text container*/}
       <h2 className='font-semibold text-xl md:text-3xl'>ROG Keris Wireless AimPoint</h2>
-      <a href="https://rog.asus.com/" target='_blank'><button className='btn'>Learn more</button></a>
+      <a href="https://rog.asus.com/" target='_blank'><button className='btn'> <span className='text-black'>Learn more</span></button></a>
       </div>
 
       <div>{/*image container*/}

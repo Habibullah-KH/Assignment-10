@@ -3,12 +3,12 @@ import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 import { useLoaderData } from "react-router-dom";
 
+
 const UpdateData = () => {
 
     const equepment = useLoaderData();
     const {stockStatus, customization, processingTime, rating, price, description, categoryName, itemName, image, _id}= equepment;
-    console.log(equepment);
-
+    
     const {user} = useContext(AuthContext);
     const categoryRef = useRef(null);
     const ratingRef = useRef(null);
@@ -120,7 +120,7 @@ console.log(Updatedequepment);
           <label className="label">
             <span className="label-text text-md text-black font-bold md:text-xl">Your email</span>
           </label>
-          <input name="email" type="email" value={user.email} className="input input-bordered" readOnly />
+          <input name="email" type="email" value={user?.email} className="input input-bordered" readOnly />
         </div>
 
 {/* name */}
@@ -128,7 +128,7 @@ console.log(Updatedequepment);
           <label className="label">
             <span className="label-text text-md text-black font-bold md:text-xl">Name</span>
           </label>
-          <input name="name" type="text"  value={user.displayName} className="input input-bordered" readOnly />
+          <input name="name" type="text"  value={user?.displayName} className="input input-bordered" readOnly />
         </div>
 
 

@@ -11,17 +11,17 @@ const Footer = () => {
        {/*Footer contact*/}
        <div className=" mt-5 text-center m-auto mb-5">
             <ul className="text-md flex gap-2 items-center justify-center">
-                <Link to="https://www.instagram.com/"><li className="list md:mr-4 p-1 rounded-md bg-slate-200 border-2 border-transparent hover:border-gray-500"><RiInstagramFill /></li></Link>
-                <Link to="https://discord.com/"><li className="list md:mr-4 p-1 rounded-md bg-slate-200 border-2 border-transparent hover:border-gray-500"><BiLogoDiscord /></li></Link>
-                <a href="https://x.com/" target="blank"><li className="list md:mr-4 p-1 rounded-md bg-slate-200 border-2 border-transparent hover:border-gray-500"><FaSquareXTwitter /></li></a>
-                <a href="https://www.youtube.com/watch?v=UpY3cqpYTJQ&t=1015s" target="blank"><li className="list md:mr-4 p-1 rounded-md bg-slate-200 border-2 border-transparent hover:border-gray-500"><FaYoutube /></li></a>
+                <Link to="https://www.instagram.com/"><li className="text-black list md:mr-4 p-1 rounded-md bg-slate-200 border-2 border-transparent hover:border-gray-500"><RiInstagramFill /></li></Link>
+                <Link to="https://discord.com/"><li className="text-black list md:mr-4 p-1 rounded-md bg-slate-200 border-2 border-transparent hover:border-gray-500"><BiLogoDiscord /></li></Link>
+                <a href="https://x.com/" target="blank"><li className="text-black list md:mr-4 p-1 rounded-md bg-slate-200 border-2 border-transparent hover:border-gray-500"><FaSquareXTwitter /></li></a>
+                <a href="https://www.youtube.com/watch?v=UpY3cqpYTJQ&t=1015s" target="blank"><li className="text-black list md:mr-4 p-1 rounded-md bg-slate-200 border-2 border-transparent hover:border-gray-500"><FaYoutube /></li></a>
             </ul>
         </div> 
 
        {/* Brand Logo and name */}
-       <div className="flex justify-center items-center ">
+       <div className="flex justify-center items-center bg-white p-2 rounded-xl">
        <img className="w-5 h-5 mr-1 md:w-10 md:h-10 " src="/logo.png"/>
-       <h2 className="font-bold md:text-xl">ActiveEdge</h2>
+       <h2 className="font-bold md:text-xl text-black">ActiveEdge</h2>
        </div>
 
 <div>

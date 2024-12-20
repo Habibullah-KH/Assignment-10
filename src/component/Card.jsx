@@ -5,7 +5,7 @@ const Card = ({data}) => {
 
     return (
         <>
-        <div className="card bg-base-100 min-h-[500px] w-96 shadow-xl">
+        <div className="card border min-h-[500px] w-96 shadow-xl">
   <figure>
     <img
     className="h-64"

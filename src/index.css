@@ -7,7 +7,7 @@
 .btn-active{
  @apply bg-clr-bg;
  @apply border-2;
- @apply border-black;
+ @apply border-gray-400;
  @apply text-black;
  @apply py-[0.7rem];
  @apply rounded-md;
@@ -33,7 +33,7 @@
 .btn{
  @apply bg-transparent;
  @apply border-2;
- @apply border-clr-bg;
+ @apply border-transparent;
  @apply duration-700;
  @apply h-fit;
  @apply mx-2;
@@ -43,9 +43,9 @@
 
 .btn:hover{
  @apply border-2;
- @apply border-clr-text-200;
- @apply bg-clr-bg;
+ @apply border-gray-500;
  @apply duration-700;
+ @apply bg-transparent;
 }
 
 @media screen and (max-width:400px) {

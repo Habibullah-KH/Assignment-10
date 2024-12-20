@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { FiXSquare } from "react-icons/fi";
@@ -9,13 +9,26 @@ const NavBar = () => {
     const {user, logOut} = useContext(AuthContext);
     const [click, setClick] = useState(false);
     const [visit, setVisit] = useState(false);
+    const [theme, setTheme] = useState(
+        localStorage.getItem("theme") || "light"
+      );
 
-    const handleDropdown = () => {
-        setClick(!click)
-    }
+    useEffect(() => {
+        localStorage.setItem("theme", theme);
+        document.querySelector("html").setAttribute("data-theme", theme);
+      }, [theme]);
+    
+      const toggleTheme = () => {
+        setTheme(prevTheme => (prevTheme === "light" ? "dark" : "light"));
+      };
+    
+      const handleDropdown = () => {
+        setClick(!click);
+      };
+      
     return (
         <>
-        <div className="flex justify-between items-center p-4 backdrop-blur-3xl bg-clr-bg bg-opacity-80 ">
+        <div className="flex justify-between items-center p-4 backdrop-blur-3xl bg-opacity-80 w-full">
             {/* Brand Logo and name */}
             <div className="flex justify-center items-center">
             <img className="w-5 h-5 mr-1 md:w-10 md:h-10" src="/logoClr.png"/>
@@ -48,8 +61,15 @@ className={({isActive}) => isActive?"btn-active" : "btn"}>
 {/* Navigative buttons END*/}
 
 
-<div className="text-xl flex items-center gap-5">
 
+<div className="text-xl flex items-center gap-5">
+          {/* Theme Toggle Button */}
+          <button
+            onClick={toggleTheme}
+            className="btn btn-outline btn-sm"
+          >
+            {theme === "light" ? " 🌙 " : " 🌞 "}
+          </button>
 {/*Login equepment and Login info*/}
 
 {
@@ -81,41 +101,37 @@ className={({isActive}) => isActive?"btn-active" : "btn"}>
 </div>
 }
 
-
-
-
-
-
             {/*Dropdown btn*/}
             <div className="lg:hidden" onClick={handleDropdown}>      
             {
                 click?<FiXSquare />:<FiMenu />
             }
 
-<div className={`absolute duration-700 bg-clr-bg bg-opacity-80 
-    ${click? 'top-20':'-top-60'}
+
+<div className={`absolute duration-700 backdrop-blur-2xl bg-white bg-opacity-75 y-5
+    ${click? 'top-[5.5rem]':'-top-72'}
     left-0 right-0 shadow-sm z-10 overflow-hidden text-center mx-auto items-center
     flex flex-col md:flex-row justify-center md:p-10
     `} >
 
 <NavLink to="/" 
 className={({isActive}) => isActive?"btn-active" : "btn"}>
-    <button type="button">Home</button>
+    <button className="text-black" type="button">Home</button>
 </NavLink>
 
 <NavLink to="/allEquepment" 
 className={({isActive}) => isActive?"btn-active" : "btn"}>
-    <button type="button">All Equipments</button>
+    <button className="text-black" type="button">All Equipments</button>
 </NavLink>
 
 <NavLink to="/addEquepment" 
 className={({isActive}) => isActive?"btn-active" : "btn"}>
-    <button type="button">Add Equipment</button>
+    <button className="text-black" type="button">Add Equipment</button>
 </NavLink>
 
 <NavLink to={`/equipment/${user?.email}`}
 className={({isActive}) => isActive?"btn-active" : "btn"}>
-    <button type="button">My Equipment List</button>
+    <button className="text-black" type="button">My Equipment List</button>
 </NavLink>
 </div>
             </div>
