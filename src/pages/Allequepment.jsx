@@ -12,7 +12,7 @@ const Allequepment = () => {
     const fetchData = async () => {
       try {
         const userEmail = user?.email || '';
-        const response = await fetch(`http://localhost:8000/allequipment?user=${userEmail}`);
+        const response = await fetch(`https://ph-10-as-server-three.vercel.app/allequipment?user=${userEmail}`);
         const data = await response.json();
         setData(data);
       } catch (error) {

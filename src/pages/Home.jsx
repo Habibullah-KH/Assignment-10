@@ -15,7 +15,7 @@ const Home = () => {
       const fetchData = async () => {
           try {
               const userEmail = user?.email || '';
-              const response = await fetch(`http://localhost:8000/equipment?user=${userEmail}`);
+              const response = await fetch(`https://ph-10-as-server-three.vercel.app/equipment?user=${userEmail}`);
               const data = await response.json();
               setEquipment(data);
             } catch (error) {

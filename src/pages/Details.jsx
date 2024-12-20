@@ -8,7 +8,7 @@ const Details = () => {
         <>
         <div className="flex flex-col items-center my-20">
 
-<div className="card bg-base-100 w-96  min-h-[500px] shadow-xl">
+<div className="card bg-base-100 w-96 min-h-[600px] shadow-xl">
   <figure>
     <img
       className="h-64"

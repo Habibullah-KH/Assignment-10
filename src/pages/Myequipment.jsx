@@ -6,7 +6,7 @@ import MyEquepmentCards from "../component/MyEquepmentCards";
 
 const Myequipment = () => {
 const data = useLoaderData();
-console.log(data);
+// console.log(data);
 if(data.length === 0){
     return <MyeqErr/>;
 }

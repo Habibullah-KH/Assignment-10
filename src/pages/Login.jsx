@@ -10,14 +10,14 @@ const Login = () => {
   const {logInUser, setUser, createUserByGoogl} = useContext(AuthContext);
 const location = useLocation();
 const naviget = useNavigate();
-console.log(location);
+// console.log(location);
 
   const handleLogin = (e) => { 
     e.preventDefault();
     const form = new FormData(e.target);
     const email = form.get('email');
     const password = form.get('password');
-    console.log(email);
+    // console.log(email);
 
     logInUser(email, password)
     .then((userData)=>{
@@ -34,7 +34,7 @@ console.log(location);
       const data = userData.user
       setUser(data)
       naviget(location?.state ? location.state : "/");
-      console.log(data);
+      // console.log(data);
     })
 
     .catch((err)=>{
@@ -45,7 +45,7 @@ console.log(location);
         icon: 'error',
         confirmButtonText: 'Close'
       })
-      console.log(errorCode);
+      // console.log(errorCode);
     })
    };
 

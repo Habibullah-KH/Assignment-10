@@ -39,9 +39,9 @@ const AddEquepment = () => {
             cancelButtonText: 'Info',
           }).then((result) => {
             if (result.isConfirmed) {
-              console.log("Close button clicked");
+              // console.log("Close button clicked");
             } else if (result.isDismissed) {
-              console.log("Info button clicked");
+              // console.log("Info button clicked");
               window.open('https://www.google.com/search?q=image+hosting+sites+like+imgur&oq=image+host&gs_lcrp=EgZjaHJvbWUqBwgDEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIGCAcQRRg90gEIODAyM2owajSoAgCwAgA&sourceid=chrome&ie=UTF-8', '_blank');
             }
       })
@@ -66,11 +66,11 @@ const AddEquepment = () => {
     });
     return;
 }
-console.log(Newequepment);
+// console.log(Newequepment);
 
 //* send data to backend
 
-    fetch('http://localhost:8000/equipment', {
+    fetch('https://ph-10-as-server-three.vercel.app/equipment', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

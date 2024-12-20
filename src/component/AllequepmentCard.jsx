@@ -1,9 +1,8 @@
 const AllequepmentCard = ({data}) => {
-    console.log(data);
     const {stockStatus, customization, processingTime, rating, price, description, categoryName, itemName, image, _id}=data;
     return (
         <>
-             <div className="card bg-base-100 min-h-[500px] w-96 shadow-xl border text-center">
+             <div className="card bg-base-100 max-h-[500px] w-96 shadow-xl border text-center">
   <figure>
     <img
       className="h-64"

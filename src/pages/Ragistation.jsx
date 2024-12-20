@@ -53,7 +53,7 @@ const Ragistation = () => {
           }
           const data = userData.user
           setUser(data)
-          console.log(data);
+          // console.log(data);
         })
         .catch((err)=>{
           const errorCode = err.code;

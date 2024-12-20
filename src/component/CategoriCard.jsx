@@ -2,7 +2,7 @@ const CategoriCard = ({data}) => {
     const {stockStatus, customization, processingTime, rating, price, description, categoryName, itemName, image, _id}=data;
     return (
         <>
-  <div className="card min-h-[500px] bg-white text-black w-96 shadow-2xl text-center">
+  <div className="card min-h-[600px] bg-white text-black w-96 shadow-2xl text-center">
   <figure>
     <img
       className="h-64"

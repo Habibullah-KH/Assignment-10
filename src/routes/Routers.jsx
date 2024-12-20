@@ -34,7 +34,7 @@ const Routers = createBrowserRouter([
             {
             path: "/category/:category",
             element: <DreamCategoryItem/>,
-            loader: ({params}) => {fetch(`http://localhost:8000/category/${params.category}`);}
+            loader: ({params}) => {fetch(`https://ph-10-as-server-three.vercel.app/category/${params.category}`);}
 
         },
     ]},
@@ -53,7 +53,7 @@ const Routers = createBrowserRouter([
     {
         path: "/user/:id",
         element: <PrivateRoute><Details/></PrivateRoute>,
-        loader:({params}) => fetch(`http://localhost:8000/user/${params.id}`)
+        loader:({params}) => fetch(`https://ph-10-as-server-three.vercel.app/user/${params.id}`)
     },
     {
         path: "/addEquepment",
@@ -65,7 +65,7 @@ const Routers = createBrowserRouter([
     {
         path: "/updateEquepment/:id",
         element: <UpdateData/>,
-        loader:({params}) => fetch(`http://localhost:8000/update/${params.id}`)
+        loader:({params}) => fetch(`https://ph-10-as-server-three.vercel.app/update/${params.id}`)
     },
     {
         path: "/allEquepment",
@@ -79,7 +79,7 @@ const Routers = createBrowserRouter([
         <Myequipment/>
     </PrivateRoute>
         ,
-        loader:({params}) => fetch(`http://localhost:8000/equipment/${params.user}`)
+        loader:({params}) => fetch(`https://ph-10-as-server-three.vercel.app/equipment/${params.user}`)
     },
 ]},
 ]);

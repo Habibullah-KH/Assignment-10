@@ -34,7 +34,7 @@ const UpdateData = () => {
     
     const urlRegex = /^https?:\/\/.*$/i;
 
-    console.log(email);
+    // console.log(email);
     const Updatedequepment = {email, name, itemName, image, description, price, categoryName, rating, processingTime, stockStatus, customization};
     if (!urlRegex.test(image)) {
         Swal.fire({
@@ -46,9 +46,9 @@ const UpdateData = () => {
             cancelButtonText: 'Info',
           }).then((result) => {
             if (result.isConfirmed) {
-              console.log("Close button clicked");
+            //   console.log("Close button clicked");
             } else if (result.isDismissed) {
-              console.log("Info button clicked");
+            //   console.log("Info button clicked");
               window.open('https://www.google.com/search?q=image+hosting+sites+like+imgur&oq=image+host&gs_lcrp=EgZjaHJvbWUqBwgDEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIHCAIQABiABDIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIGCAcQRRg90gEIODAyM2owajSoAgCwAgA&sourceid=chrome&ie=UTF-8', '_blank');
             }
       })
@@ -73,10 +73,10 @@ const UpdateData = () => {
     });
     return;
 }
-console.log(Updatedequepment);
+// console.log(Updatedequepment);
 
 //* update backend
-    fetch(`http://localhost:8000/update/${_id}`, {
+    fetch(`https://ph-10-as-server-three.vercel.app/update/${_id}`, {
         method: 'PUT',
         headers: {
             'content-type': 'application/json'
@@ -94,7 +94,7 @@ console.log(Updatedequepment);
             })
         }
     })
-    .catch(err => console.log('what is this', err));
+    // .catch(err => console.log('what is this', err));
 
 
 } //!handleSubmit function end

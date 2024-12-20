@@ -7,7 +7,6 @@ import { AuthContext } from "../provider/AuthProvider";
 
 const DreamCategoryItem = () => {
     const { category } = useParams();
-    console.log(category);
     const { user } = useContext(AuthContext);
     const [product, setProduct] = useState([]);
 
@@ -18,7 +17,7 @@ const DreamCategoryItem = () => {
             user: userEmail,
         }).toString();
 
-        fetch(`http://localhost:8000/category?${query}`)
+        fetch(`https://ph-10-as-server-three.vercel.app/category?${query}`)
             .then((res) => res.json())
             .then((data) => setProduct(data));
     }, [category, user]);
