@@ -12,7 +12,7 @@ const CategoriCard = ({data}) => {
   <div className="card-body text-left">
     <h2 className="card-title text-center">{itemName}</h2>
     <p>{description}</p>
-    <p>Price: {price}</p>
+    <p>Price: {price} $</p>
     <p>Rating: {rating}</p>
     <div className="card-actions justify-end">
       <a href='https://rog.asus.com/' target="blank"><button className="btn text-black">Buy Now</button></a>

@@ -36,6 +36,7 @@ const NavBar = () => {
           <h2 className="font-bold md:text-xl text-black">ActiveEdge</h2>
         </div>
 
+<div className="flex items-center gap-3">
         {/* Navigation buttons (desktop) */}
         <div className="hidden lg:flex gap-2">
           <NavLink to={"/"}>
@@ -118,6 +119,8 @@ const NavBar = () => {
             {click ? <FiXSquare /> : <FiMenu />}
           </div>
         </div>
+</div>
+
       </div>
 
       {/* Mobile Dropdown Menu */}

@@ -18,7 +18,7 @@ const Offer = () => {
     <h2 className="card-title">EXPAND YOUR GAMING OPTIONS</h2>
     <p className="text-sm">Everyday financing offers with Pay Credit. The easy way to get the tech you want.</p>
     <div className="card-actions justify-end">
-      <a href="https://www.dell.com/en-us/gaming/alienware"><button className="btn text-white hover:text-black">GET FINANCING</button></a>
+      <a href="https://www.dell.com/en-us/gaming/alienware"><button className="btn text-white">GET FINANCING</button></a>
     </div>
   </div>
 </div>
@@ -34,7 +34,7 @@ const Offer = () => {
     <h2 className="card-title">LIMITLESS IS NOW WITHIN REACH</h2>
     <p className="text-sm">Shop next-level gaming for less, with the latest deals on Alienware PCs.</p>
     <div className="card-actions justify-end">
-      <a href="https://rog.asus.com/"><button className="btn text-white hover:text-black">Best Desktop deals</button></a>
+      <a href="https://rog.asus.com/"><button className="btn text-white">Best Desktop deals</button></a>
     </div>
   </div>
 </div>
