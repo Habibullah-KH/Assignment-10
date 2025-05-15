@@ -60,7 +60,7 @@ const NavBar = () => {
           </NavLink>
 
            {user && (
-             <NavLink to="/dashboard">
+             <NavLink to="/dashboard/addEquepment">
                {({ isActive }) => (
                  <FillButton
                    theme={theme}
@@ -150,7 +150,7 @@ const NavBar = () => {
         </NavLink>
 
         {user && (
-          <NavLink to="/dashboard">
+          <NavLink to="/dashboard/addEquepment">
             {({ isActive }) => (
               <FillButton
                 theme={theme}

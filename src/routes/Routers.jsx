@@ -68,7 +68,7 @@ const Routers = createBrowserRouter([
     element: <Profile/>,
   },
   {
-  path: "addEquepment",
+  path: "/dashboard/addEquepment",
   element: (
     <PrivateRoute>
       <AddEquepment />
@@ -76,13 +76,13 @@ const Routers = createBrowserRouter([
   ),
   },
   {
-    path: "updateEquepment/:id",
+    path: "/dashboard/updateEquepment/:id",
     element: <UpdateData />,
     loader: ({ params }) =>
       fetch(`${import.meta.env.VITE_SERVER_url}/update/${params.id}`),
   },
   {
-    path: "equipment/:user",
+    path: "/dashboard/equipment/:user",
     element: (
       <PrivateRoute>
         <Myequipment />

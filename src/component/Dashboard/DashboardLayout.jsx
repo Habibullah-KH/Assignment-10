@@ -68,7 +68,7 @@ const DashboardLayout = () => {
           )}
         </NavLink>
 
-          <NavLink to="/addEquepment">
+          <NavLink to="/dashboard/addEquepment">
           {({ isActive }) => (
             <FillButton
               text="Add Equipment"
@@ -77,7 +77,7 @@ const DashboardLayout = () => {
           )}
         </NavLink>
 
-        <NavLink to={`/equipment/${user?.email}`}>
+        <NavLink to={`/dashboard/equipment/${user?.email}`}>
           {({ isActive }) => (
             <FillButton
               text="My Equipment List"

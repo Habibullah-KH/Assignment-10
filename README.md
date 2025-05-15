@@ -1,19 +1,57 @@
-### 🎖️ ActiveEdge
+# 🎖️ ActiveEdge
 
-## About ActiveEdge
+## Project Overview  
+**ActiveEdge** is an innovative online store dedicated to providing high-quality sports equipment tailored to meet the unique needs of athletes and enthusiasts. The platform focuses on customization, efficiency, and a seamless shopping experience for users looking for top-tier sports gear.
 
-ActiveEdge is an innovative online store dedicated to providing high-quality sports equipment tailored to meet the unique needs of athletes and enthusiasts. Our platform ensures a seamless shopping experience with a focus on customization, efficiency, and user satisfaction.
+---
 
-## Key Features
+## Features  
+- **Intuitive User Interface** – Clean and simple navigation for all users  
+- **Fast and Responsive** – Optimized for speed across all devices  
+- **Custom Product Integration** – Users can request or view personalized equipment  
+- **User Equipment Management** – Track, manage, and modify purchased/customized items  
+- **One-Click Purchase** – Smooth and secure checkout experience  
+- **Authentication System** – Secure login and registration  
+- **Cart System** – Add, update, and remove products from the cart  
+- **Dynamic Product Display** – Category-based filtering and dynamic rendering  
+- **Admin Dashboard** – Manage products and view analytics  
+- **Search Functionality** – Quickly find desired equipment  
+- **Responsive Design** – Mobile and tablet-friendly interface  
 
-- Intuitive User Interface: Designed for simplicity and ease of navigation, ensuring an enjoyable user experience.
+---
 
-- Fast and Responsive: Optimized for quick loading times and smooth interactions.
+## Tech Stack Used  
 
-- Custom Product Integration: Support for personalized sports equipment to meet specific requirements.
+### Frontend  
+- React.js  
+- Tailwind CSS  
+- React Router  
 
-- User Equipment Management: Manage and track customized equipment effortlessly.
+### Backend  
+- Node.js  
+- Express.js  
+- MongoDB  
 
-- One-Click Purchase: Streamlined checkout process for a hassle-free shopping experience.
+### Authentication  
+- Firebase Authentication  
 
-[Live link](https://ph-10-as-54712.web.app/category/All)
+### Deployment  
+- Vercel (Frontend)  
+- Render (Backend API)  
+
+---
+
+## Setup and Installation
+
+### bash
+# 1. Clone the repository
+git clone https://github.com/your-username/activeedge.git
+
+# 2. Navigate to the project directory
+cd activeedge
+
+# 3. Install dependencies
+npm install
+
+# 4. Set up environment variables
+# Create a .env file and add the following:
