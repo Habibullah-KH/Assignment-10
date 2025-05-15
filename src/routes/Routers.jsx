@@ -51,14 +51,6 @@ const Routers = createBrowserRouter([
           element: <Allequepment />,
         },
       {
-        path: "/signIn",
-        element: <Ragistation />,
-      },
-      {
-        path: "/login",
-        element: <Login />,
-      },
-      {
         path: "/user/:id",
         element: (<Details />),
         loader: ({ params }) =>
@@ -101,6 +93,14 @@ const Routers = createBrowserRouter([
   },
     ]
   },
+      {
+        path: "/signIn",
+        element: <Ragistation />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
 ]);
 
 
