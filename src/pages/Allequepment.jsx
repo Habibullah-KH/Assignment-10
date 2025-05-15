@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import AllequepmentCard from "../component/AllequepmentCard";
 import Loding from "./Loding";
 import { AuthContext } from "../provider/AuthProvider";
-
+import ".././component/buttons/button.css"
 const Allequepment = () => {
   const [data, setData] = useState([]);
   const [sortOrder, setSortOrder] = useState('asc');
@@ -12,7 +12,7 @@ const Allequepment = () => {
     const fetchData = async () => {
       try {
         const userEmail = user?.email || '';
-        const response = await fetch(`https://ph-10-as-server-three.vercel.app/allequipment?user=${userEmail}`);
+        const response = await fetch(`${import.meta.env.VITE_SERVER_url}/allequipment?user=${userEmail}`);
         const data = await response.json();
         setData(data);
       } catch (error) {
@@ -52,7 +52,7 @@ const Allequepment = () => {
         {/* Sort button */}
         <button 
           onClick={handleSortClick} 
-          className="mt-6 px-6 py-3 bg-clr-primary text-white rounded shadow hover:bg-clr-secondary my-5 text-left"
+          className="mt-6 px-6 py-3 my-button my-5 text-left"
         >
           Sort by Price
           {/* Sort by Price: {sortOrder === 'asc' ? 'Low to High' : 'High to Low'} */}

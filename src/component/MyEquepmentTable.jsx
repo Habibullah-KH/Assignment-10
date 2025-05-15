@@ -17,7 +17,7 @@ const MyEquepmentTable = ({ data, onDelete }) => {
           confirmButtonText: "Yes, delete it!",
       }).then((result) => {
           if (result.isConfirmed) {
-              fetch(`https://ph-10-as-server-three.vercel.app/users/${id}`, {
+              fetch(`${import.meta.env.VITE_SERVER_url}/users/${id}`, {
                   method: "DELETE",
               })
   .then((res) => res.json())

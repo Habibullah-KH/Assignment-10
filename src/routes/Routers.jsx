@@ -5,83 +5,103 @@ import Ragistation from "../pages/Ragistation";
 import Login from "../pages/Login";
 import Details from "../pages/Details";
 import DreamCategoryItem from "../component/DreamCategoryItem";
-import PrivateRoute from "../PrivateRoute";
+import PrivateRoute from "./PrivateRoute";
 import AddEquepment from "../pages/AddEquepment";
 import Myequipment from "../pages/Myequipment";
 import Allequepment from "../pages/Allequepment";
 import UpdateData from "../pages/UpdateData";
 import NotFound from "../component/NotFound";
+import Dashboard from "../pages/Dashboard";
+import Profile from "../component/Dashboard/Profile";
 
 
 const Routers = createBrowserRouter([
-
-    {
-    path: "/",
-    element: <MainLayout/>,
-    children: [
-        {
-            path: "/",
-            element: <Navigate to='/category/All'/>
-        },
-        {
-        path: "/",
-        element: <Home/>,
-        children: [
-            {
-                path: "/",
-                element: <Navigate to='/category/All'/>
-            },
-            {
-            path: "/category/:category",
-            element: <DreamCategoryItem/>,
-            loader: ({params}) => {fetch(`https://ph-10-as-server-three.vercel.app/category/${params.category}`);}
-
-        },
-    ]},
-    {
+  
+      // Not found page
+      {
         path: "*",
         element: <NotFound />,
-    },
-    {
+      },
+      
+  {
+    path: "/",
+    element: <MainLayout />,
+    children: [
+      // Default redirect to All category
+      {
+        index: true,
+        element: <Navigate to="/category/All" />,
+      },
+
+      // Home page route (with nested DreamCategoryItem)
+      {
+        path: "/",
+        element: <Home />,
+        children: [
+          {
+            path: "category/:category",
+            element: <DreamCategoryItem />,
+            loader: ({ params }) =>
+              fetch(`${import.meta.env.VITE_SERVER_url}/category/${params.category}`),
+          },
+        ],
+      },
+        {
+          path: "allEquepment",
+          element: <Allequepment />,
+        },
+      {
         path: "/signIn",
-        element: <Ragistation/>
-    },
-    {
+        element: <Ragistation />,
+      },
+      {
         path: "/login",
-        element: <Login/>
-    },
-    {
+        element: <Login />,
+      },
+      {
         path: "/user/:id",
-        element: <PrivateRoute><Details/></PrivateRoute>,
-        loader:({params}) => fetch(`https://ph-10-as-server-three.vercel.app/user/${params.id}`)
-    },
-    {
-        path: "/addEquepment",
-        element: 
-        <PrivateRoute>
-            <AddEquepment/>
-        </PrivateRoute>
-    },
-    {
-        path: "/updateEquepment/:id",
-        element: <UpdateData/>,
-        loader:({params}) => fetch(`https://ph-10-as-server-three.vercel.app/update/${params.id}`)
-    },
-    {
-        path: "/allEquepment",
-        element: 
-        <Allequepment/>
-    },
-    {
-        path: "/equipment/:user",
-        element: 
+        element: (<Details />),
+        loader: ({ params }) =>
+          fetch(`${import.meta.env.VITE_SERVER_url}/user/${params.id}`),
+      },
+    ],
+  },
+  
+  {
+    path: "/dashboard",
+    element: <Dashboard/>,
+    children: [
+  {
+    path: "/dashboard/profile",
+    element: <Profile/>,
+  },
+  {
+  path: "addEquepment",
+  element: (
     <PrivateRoute>
-        <Myequipment/>
+      <AddEquepment />
     </PrivateRoute>
-        ,
-        loader:({params}) => fetch(`https://ph-10-as-server-three.vercel.app/equipment/${params.user}`)
-    },
-]},
+  ),
+  },
+  {
+    path: "updateEquepment/:id",
+    element: <UpdateData />,
+    loader: ({ params }) =>
+      fetch(`${import.meta.env.VITE_SERVER_url}/update/${params.id}`),
+  },
+  {
+    path: "equipment/:user",
+    element: (
+      <PrivateRoute>
+        <Myequipment />
+      </PrivateRoute>
+    ),
+    loader: ({ params }) =>
+      fetch(`${import.meta.env.VITE_SERVER_url}/equipment/${params.user}`),
+  },
+    ]
+  },
 ]);
+
 
 export default Routers;

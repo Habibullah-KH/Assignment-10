@@ -76,7 +76,7 @@ const UpdateData = () => {
 // console.log(Updatedequepment);
 
 //* update backend
-    fetch(`https://ph-10-as-server-three.vercel.app/update/${_id}`, {
+    fetch(`${import.meta.env.VITE_SERVER_url}/update/${_id}`, {
         method: 'PUT',
         headers: {
             'content-type': 'application/json'

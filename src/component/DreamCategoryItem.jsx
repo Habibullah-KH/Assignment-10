@@ -17,7 +17,7 @@ const DreamCategoryItem = () => {
             user: userEmail,
         }).toString();
 
-        fetch(`https://ph-10-as-server-three.vercel.app/category?${query}`)
+        fetch(`${import.meta.env.VITE_SERVER_url}/category?${query}`)
             .then((res) => res.json())
             .then((data) => setProduct(data));
     }, [category, user]);

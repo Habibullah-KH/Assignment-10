@@ -8,26 +8,24 @@ import Offer from "../component/Offer";
 
 const Home = () => {
   const {user} = useContext(AuthContext);
-
+  const userEmail = user?.email || '';
   const [equipment, setEquipment] = useState([]);
-    
+
   useEffect(() => {
-      const fetchData = async () => {
-          try {
-              const userEmail = user?.email || '';
-              const response = await fetch(`https://ph-10-as-server-three.vercel.app/equipment?user=${userEmail}`);
-              const data = await response.json();
-              setEquipment(data);
-            } catch (error) {
-              console.error("Error fetching equipment data:", error);
-            }
-          };
-          
-          fetchData();
-        }, [user]);
+  const fetchData = async () => {
+    try {
+      const response = await fetch(`${import.meta.env.VITE_SERVER_url}/equipment?user=${userEmail}`);
+      const data = await response.json();
+      setEquipment(data || []);
+    } catch (error) {
+      console.error("Error fetching equipment data:", error);
+    }
+  };
+
+  fetchData();
+}, [userEmail]);
+
         
-
-
   return (
     <>
       <div>{/*Parent container*/}
@@ -38,7 +36,7 @@ const Home = () => {
         {/* Cards */}
         <div>
           {/* Show a loading message if no data has been fetched yet */}
-          {equipment.length === 0 ? <Loding/> : <CardContainer datas={equipment} />}
+         {equipment.length === 0 ? <Loding /> : <CardContainer datas={equipment} />}
         </div>
 
 {/* additional 1 */}

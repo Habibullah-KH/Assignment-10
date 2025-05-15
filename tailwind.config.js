@@ -9,12 +9,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        'clr-primary': '#2ECC71',
-        'clr-secondary': '#FFC107',
-        'clr-accent': '#2ECC71',
+        'clr-primary': 'rgb(105,231,255)',
+        'clr-secondary': '#f67578',
+        'clr-accent': 'rgba(105,231,255,0.4)',
         'clr-bg': '#ffffff',
         'clr-text-100': '#6d597a',
         'clr-text-200': '#050315',
+      },
+      animation: {
+        gradient: 'gradientMove 4s ease infinite',
+      },
+      keyframes: {
+        gradientMove: {
+          '0%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+          '100%': { backgroundPosition: '0% 50%' },
+        },
       },
     },
   },

@@ -70,7 +70,7 @@ const AddEquepment = () => {
 
 //* send data to backend
 
-    fetch('https://ph-10-as-server-three.vercel.app/equipment', {
+    fetch('${import.meta.env.VITE_SERVER_url}/equipment', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

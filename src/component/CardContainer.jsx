@@ -8,7 +8,7 @@ const CardContainer = ({datas}) => {
         <div className="flex flex-wrap justify-center gap-3 my-20">
         <Fade delay={50} cascade damping={0.1}>
             {
-              datas.length===0?<Loding/> :datas.map((data, i)=> {return <Card key={i} data={data}/>})
+              datas.length === 0 ? <Loding/> : datas?.map((data, i)=> {return <Card key={i} data={data}/>})
             }
         </Fade>
         </div>
