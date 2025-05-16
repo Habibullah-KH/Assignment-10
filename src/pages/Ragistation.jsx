@@ -161,7 +161,7 @@ const Ragistation = () => {
 
           {/* Submit */}
           <div className="form-control">
-            <button className="btn w-full bg-blue-600 text-white hover:bg-blue-700">
+            <button className="btn w-full bg-blue-600 text-black hover:text-white hover:bg-blue-700">
               Sign Up
             </button>
           </div>
