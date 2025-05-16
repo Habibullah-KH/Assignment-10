@@ -2,10 +2,15 @@ import { useLoaderData } from "react-router-dom";
 import MyeqErr from "./MyeqErr";
 import Loding from "./Loding";
 import MyEquepmentCard from "../component/MyEquepmentCards";
+import NotFound from "../component/NotFound";
 
 const Myequipment = () => {
   const data = useLoaderData();
-
+if (!(data)) {
+        return <div className="text-red-500 text-center">
+        <NotFound/>
+        </div>;
+    }
   if (!data || data.length === 0) {
     return <MyeqErr />;
   }
