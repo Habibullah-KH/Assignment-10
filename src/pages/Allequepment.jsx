@@ -3,6 +3,7 @@ import AllequepmentCard from "../component/AllequepmentCard";
 import Loding from "./Loding";
 import { AuthContext } from "../provider/AuthProvider";
 import ".././component/buttons/button.css"
+import NotFound from "../component/NotFound";
 const Allequepment = () => {
   const [data, setData] = useState([]);
   const [sortOrder, setSortOrder] = useState('asc');
@@ -32,7 +33,11 @@ const Allequepment = () => {
       }
     });
   };
-
+if (!Array.isArray(data)) {
+        return <div className="text-red-500 text-center">
+        <NotFound/>
+        </div>;
+    }
   const handleSortClick = () => {
     setSortOrder('asc');
     // setSortOrder(prevOrder => (prevOrder === 'asc' ? 'desc' : 'asc'));

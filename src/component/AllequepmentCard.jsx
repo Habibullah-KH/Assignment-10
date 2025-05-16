@@ -1,5 +1,6 @@
 const AllequepmentCard = ({data}) => {
     const {stockStatus, customization, processingTime, rating, price, description, categoryName, itemName, image, _id}=data;
+    
     return (
         <>
              <div className="card bg-base-100 max-h-[500px] w-96 shadow-xl border text-center">

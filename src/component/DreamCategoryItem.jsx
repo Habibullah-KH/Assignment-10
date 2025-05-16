@@ -21,7 +21,7 @@ const DreamCategoryItem = () => {
             .then((res) => res.json())
             .then((data) => setProduct(data));
     }, [category, user]);
-
+console.log(product);
     return <>
     {product.length === 0 ? <Loding /> : <Category data={product} />}
     </>;

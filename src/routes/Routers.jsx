@@ -39,11 +39,11 @@ const Routers = createBrowserRouter([
         element: <Home />,
         children: [
           {
-            path: "category/:category",
-            element: <DreamCategoryItem />,
-            loader: ({ params }) =>
-              fetch(`${import.meta.env.VITE_SERVER_url}/category/${params.category}`),
-          },
+         path: "category/:category",
+          element: <DreamCategoryItem />,
+           loader: ({ params }) =>
+            fetch(`${import.meta.env.VITE_SERVER_url}/category?category=${params.category}`),
+           },
         ],
       },
         {
