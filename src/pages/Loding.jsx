@@ -1,4 +1,4 @@
-const Loding = () => {
+const Loading = () => {
     return (
         <>
         <div className="h-dvh flex items-center justify-center">
@@ -8,4 +8,4 @@ const Loding = () => {
     );
 };
 
-export default Loding;
+export default Loading;

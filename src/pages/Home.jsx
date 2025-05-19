@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider"
 import CardContainer from "../component/CardContainer";
 import Slider from "../component/Slider";
-import Loding from "./Loding";
+import Loading from "./Loding";
 import DreamSetup from "../component/DreamSetup";
 import Offer from "../component/Offer";
 import WarrantyPolicy from "../component/WarrantyPolicy";
@@ -41,7 +41,7 @@ const Home = () => {
         <h2 className="text-center mt-16 text-3xl font-bold">Our top Gadgets</h2>
         <p className="text-sm text-gray-700 text-center font-semibold mt-2">Get Your Desired Product from Our top Gadgets Category!</p>
           {/* Show a loading message if no data has been fetched yet */}
-         {equipment.length === 0 ? <Loding /> : <CardContainer datas={equipment} />}
+         {equipment.length === 0 ? <Loading /> : <CardContainer datas={equipment} />}
         </div>
 
 {/* additional 1 */}

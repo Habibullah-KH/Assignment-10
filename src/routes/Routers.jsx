@@ -1,7 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home";
-import Ragistation from "../pages/Ragistation";
+import Registation from "../pages/Ragistation";
 import Login from "../pages/Login";
 import Details from "../pages/Details";
 import DreamCategoryItem from "../component/DreamCategoryItem";
@@ -94,8 +94,8 @@ const Routers = createBrowserRouter([
     ]
   },
       {
-        path: "/signIn",
-        element: <Ragistation />,
+        path: "/registration",
+        element: <Registation />,
       },
       {
         path: "/login",

@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import AllequepmentCard from "../component/AllequepmentCard";
-import Loding from "./Loding";
+import Loading from "./Loding";
 import { AuthContext } from "../provider/AuthProvider";
 import ".././component/buttons/button.css"
 import NotFound from "../component/NotFound";
@@ -44,7 +44,7 @@ if (!Array.isArray(data)) {
   };
 
   if (data.length === 0) {
-    return <Loding />;
+    return <Loading />;
   }
 
   const sortedData = sortData([...data], sortOrder);

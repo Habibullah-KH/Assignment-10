@@ -1,6 +1,6 @@
 const WarrantyPolicy = () => {
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-2xl mt-24">
+    <div className="max-w-4xl mx-auto p-6 bg-white shadow-md rounded-2xl my-36">
       <h2 className="text-3xl font-bold mb-4 text-blue-700">Warranty Policy</h2>
       <p className="mb-4 text-gray-700">
         At <span className="font-semibold text-gray-900">Your PC Shop</span>, we stand behind the quality of our components. Below are the details of our warranty policy:

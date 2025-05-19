@@ -9,7 +9,7 @@ import {
   AiOutlineArrowLeft,
 } from "react-icons/ai";
 
-const Ragistation = () => {
+const Registration = () => {
   const [showHide, setShowHide] = useState(false);
   const navigate = useNavigate();
   const { createUser, setUser, updateUser, createUserByGoogl } = useContext(AuthContext);
@@ -190,4 +190,4 @@ const Ragistation = () => {
   );
 };
 
-export default Ragistation;
+export default Registration;

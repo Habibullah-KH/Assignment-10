@@ -132,7 +132,7 @@ const Login = () => {
 
           {/* Submit Button */}
           <div className="form-control">
-            <button className="btn w-full bg-blue-600 text-white hover:bg-blue-700">
+            <button className="btn w-full bg-blue-600 text-black hover:text-white hover:bg-blue-700">
               Log In
             </button>
           </div>
@@ -151,7 +151,7 @@ const Login = () => {
           {/* Redirect to Signin */}
           <p className="text-center text-gray-700 text-sm">
             Don&apos;t have an account?{" "}
-            <NavLink to="/signin" className="text-blue-600 hover:underline">
+            <NavLink to="/registration" className="text-blue-600 hover:underline">
               Sign up now
             </NavLink>
           </p>

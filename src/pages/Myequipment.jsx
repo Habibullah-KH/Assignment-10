@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import MyeqErr from "./MyeqErr";
-import Loding from "./Loding";
+import Loading from "./Loding";
 import MyEquepmentCard from "../component/MyEquepmentCards";
 import NotFound from "../component/NotFound";
 
@@ -17,7 +17,7 @@ if (!(data)) {
 
   return (
     <div className="min-h-screen p-4 md:p-8">
-      {!data.length ? <Loding /> : <MyEquepmentCard data={data} />}
+      {!data.length ? <Loading /> : <MyEquepmentCard data={data} />}
     </div>
   );
 };

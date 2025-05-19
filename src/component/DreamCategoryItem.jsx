@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Category from "./Category";
-import Loding from "../pages/Loding";
+import Loading from "../pages/Loding";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 
@@ -23,7 +23,7 @@ const DreamCategoryItem = () => {
     }, [category, user]);
 console.log(product);
     return <>
-    {product.length === 0 ? <Loding /> : <Category data={product} />}
+    {product.length === 0 ? <Loading /> : <Category data={product} />}
     </>;
 };
 
