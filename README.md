@@ -43,15 +43,17 @@
 
 ## Setup and Installation
 
-### bash
-# 1. Clone the repository
-git clone https://github.com/Habibullah-KH/Assignment-10.git
+To get started with the project, follow these steps:
 
-# 2. Navigate to the project directory
-cd activeedge
-
-# 3. Install dependencies
+```bash
+git clone https://github.com/Habibullah-KH/PH_11_AS-client.git
+```
+```bash
+cd PH_11_AS-client
+```
+```bash
 npm install
-
-# 4. Set up environment variables
-# Create a .env file and add the following:
+```
+```bash
+npm run dev
+```
