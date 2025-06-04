@@ -18,6 +18,7 @@
 - **Search Functionality** – Quickly find desired equipment  
 - **Responsive Design** – Mobile and tablet-friendly interface  
 
+## [👑 Project live link](https://ph-10-as-54712.web.app/category/All)
 ---
 
 ## Tech Stack Used  
